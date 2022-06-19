@@ -1,0 +1,18 @@
+div {
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    /* transition: all 1s .2s; 방향, 지속시간(duration), 딜레이(delay) */
+    transition: margin-left 1s .2s; /* 방향, 지속시간(duration), 딜레이(delay) */
+}
+
+body:hover div {
+    margin-left: 300px;
+}
+
+/* 
+    < window.innerWidth, window.innerHeight >
+
+- 브라우저창의 부가요소(제목표시줄, 도구상자, 스크롤바)를 제외한 순수한 디스플레이
+창의 너비와 높이를 반환 => window 객체는 생략 가능
+*/

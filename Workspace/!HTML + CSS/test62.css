@@ -1,0 +1,44 @@
+.parentBox {
+    background-color: antiquewhite;
+    width: 400px;
+    height: 300px;
+}
+
+.parentBox div {
+    width: 100px;
+    height: 100px;
+}
+
+.childBox1 {
+    background-color: blue;
+}
+
+.childBox2 {
+    background-color: red;
+}
+
+.childBox3 {
+    background-color: yellow;
+}
+
+.parentBox:hover .childBox1 {
+    margin-left: 100px;
+}
+
+.parentBox:hover .childBox2 {
+    margin-left: -100px;
+}
+
+.parentBox:hover .childBox3 {
+    margin-left: 300px;
+    margin-top: -200px;
+}
+
+.childBox4 {
+    background-color: green;
+}
+
+div:nth-of-type(2) div {
+    display: inline-block;
+}
+

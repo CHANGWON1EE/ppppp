@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테이블 내에서의 수직 정렬</title>
+
+  <link rel="stylesheet" href="test53.css">
+</head>
+
+<body>
+  <h1>테이블 내에서의 수직 정렬</h1>
+  <hr>
+
+  <table>
+    <thead>
+      <tr>
+        <th>top</th>
+        <th>middle</th>
+        <th>bottom</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class="ver-top">수직 상단 정렬</td>
+        <td class="ver-middle">수직 중간 정렬</td>
+        <td class="ver-bottom">수직 하단 정렬</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+      <thead>
+          <tr>
+              <th scope="row" colspan="2">1</th>
+              <th>3</th>
+              <th>4</th>
+          </tr>
+      </thead>
+
+      <tbody>
+          <tr>
+              <td scope="row" rowspan="4">4</td>
+              <td>5</td>
+              <td>6</td>
+              <td>7</td>
+          </tr>
+
+          <tr>
+              <td>8</td>
+              <td>9</td>
+              <td>10</td>
+          </tr>
+
+          <tr>
+              <td>11</td>
+              <td>12</td>
+              <td>13</td>
+          </tr>
+          
+          <tr>
+              <td>14</td>
+              <td>15</td>
+              <td>16</td>
+          </tr>
+      </tbody>
+
+      <tfoot>
+          <tr>
+              <th scope="row" colspan="3">합</th>
+              <td>!</td>
+          </tr>
+      </tfoot>
+  </table>
+</body>
+
+</html>

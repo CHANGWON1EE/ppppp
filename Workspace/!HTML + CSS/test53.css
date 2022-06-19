@@ -1,0 +1,34 @@
+table {
+    border-collapse: collapse;
+}
+
+/* 부모 요소가 되는 table 태그에 border-collapse 속성을 지정해야 부모 자신을 포함한 하위 태그들에 대한 속성값이 적용됨에 주의 */
+
+td,
+th {
+    border: solid 2px red;
+    width: 150px;
+}
+
+/* th나 td 태그에 보더라인을 적용시키면, 각 요소마다 테두리가 적용되어 전체적인 테두리 완성 가능 */
+
+th {
+    color: blue;
+}
+
+td {
+    height: 100px;
+    text-align: center;
+}
+
+.ver-top {
+    vertical-align: top;
+}
+
+.ver-middle {
+    vertical-align: middle;
+}
+
+.ver-bottom {
+    vertical-align: bottom;
+}

@@ -1,0 +1,13 @@
+'use strict';
+
+function setValue1(inputValue) {
+    let value = inputValue ?? 'default Value';
+    console.log(value);
+}
+setValue1('data');
+setValue1(0);               // null과  undefined가 아닌  falsy값들도 초기화 값으로 사용하고자
+setValue1('');              // 하는 경우 or는 0, '', NaN값들도 falsy값으로 인정함으로써 의도치
+setValue1(NaN);             // 않는 초기화 결과를 얻을 수 있는 가능성.
+setValue1(null);
+setValue1(undefined);
+console.log('---------------');

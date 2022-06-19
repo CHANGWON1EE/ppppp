@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+
+    background-color: khaki;
+    margin: 0 1%;
+}
+
+/* ==================================================================================================== */
+/* < header > */
+
+header {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    position: fixed;
+
+    background-color: khaki;
+    width: 98%;
+    /* height: 60px; */
+    /* margin: 0 10px 10px 10px; */
+    padding-bottom: .625em;
+}   
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+
+    width: 60%;
+    margin-bottom: .3125em;
+}
+
+.menu li {
+    width: 33%;
+    list-style: none;
+}
+
+.menu li a {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+    font-size: 1.5em;
+    line-height: 50px;
+    text-decoration: none;
+    letter-spacing: 10px;
+    padding-left: 10px;
+}
+
+.menu li .selected {
+    background-color: black;
+}
+
+.menu li:not([class="selected"]) {
+    background-color: darkseagreen;
+}
+
+/* ==================================================================================================== */
+
+.contents {
+    width: 60%;
+}
+
+.contents div {
+    display: none;
+    background-color: rgb(202, 232, 244);
+    text-align: justify;
+    word-break: break-all;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+#content2, #content3 {
+    display: none;
+}
+
+/* ==================================================================================================== */
+/* < main > */
+
+main {
+    background-color: rgb(242, 173, 150);
+    text-align: justify;
+    word-break: break-all;
+    font-size: 1.2em;
+    padding: .625em;
+    /* margin-top: 320px; */
+    /* width: 98%; */
+    /* height: 100% */
+}

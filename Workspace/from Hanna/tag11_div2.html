@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<!-- 
+
+position : 태그를 어떻게 위치시킬지를 정의하며 5가지 사용방법을 보유함.
+
+position-static : position에 아무것도 넣지 않으면 디폴트로 지정됨
+다른 태그와의 관계에 의해 자동으로 배치됨, 위치를 따로 설정해 줄 수 없음.
+
+position-absolute : 절대 좌표와 함께 위치를 지정해 줄 수 있습니다.
+
+position-relative : 원래 있던 위치를 기준으로 좌표를 지정합니다.
+
+position-fixed : 웹페이지의 스크롤(창의 크기)과 상관없이 항상 페이지의
+좌측상단을 기준으로 좌표를 고정합니다.
+
+position-inherit : 부모 태그의 속성값을 상속받습니다.
+ex) 부모div가 포지션앱솔루트 좌상100px일때 자식div가 포지션인헤리트 좌상100px이면
+    좌상 200px으로 인정됨
+    (※좌상 : left, top)
+
+position-left : 디스플레이단의 웹페이지 좌측끝 기준 좌표설정
+position-right : 디스플레이단의 웹페이지 우측끝 기준 좌표설정
+position-top : 디스플레이단의 웹페이지 상단끝 기준 좌표설정
+position-bottom : 디스플레이단의 웹페이지 하단끝 기준 좌표설정
+
+※주의사항 : left와 right, top과 bottom등... 서로 상반된 좌표를 함께 설정하면
+         각각 left와 top이 적용된다.
+ -->
+<style>
+   div{ /*최상위 태그 div의 태그이므로 최상단*/
+      width:200px;
+      height:200px
+   }
+   
+   #d1{ /*아이디로 선택하는 태그이므로 2번째*/
+      background-color:lightblue;
+      position : static;
+      /*left:100px; 하나 안하나 의미가 없다 position이 static이라서...*/
+      /*top:100px;*/
+      left:100px;
+      top:100px;
+   }
+   #d2{
+      background-color:yellow;
+      position:absolute;
+      left:100px;
+      top:100px;
+   }
+   #d3{
+      background-color:orange;
+      position:relative;
+      left:100px;
+      top:100px;
+   }
+   #d4{
+      background-color:#ddd;
+      position:fixed;
+      right:10px;
+      bottom:10px;
+   }
+   #d5{
+      background-color:pink;
+   }
+   #d6{
+      position:absolute;
+   }
+   #d7{
+      width:50px;
+      height:50px;
+      position:absolute;
+      left:50px;
+      top:100px;
+   }
+   img{
+      position:fixed;
+      width:100px;
+      height:100px;
+      right:100px;
+      top:100px;
+   }
+</style>
+</head>
+<body>
+   <div id="d1">d1</div>
+   <div id="d2">d2
+      <div id="d7">d7</div>
+   </div>
+   <div id="d3">d3</div>
+   <div id="d4" style="width:100px; height:80px;">d4</div>
+   <div id="d5">d5
+      <div id="d6" style="width:100px; height:100px; background-color:red;">d6</div>
+   </div>
+   <img src="../img/samdasu.jpg">
+</body>
+</html>

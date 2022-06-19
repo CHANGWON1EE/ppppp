@@ -1,0 +1,49 @@
+.serif {
+    font-family: serif;
+}
+
+.sans_serif {
+    font-family: sans-serif;
+}
+
+.cursive {
+    font-family: cursive;
+}
+
+.monospace {
+    font-family: monospace;
+}
+
+.dotum_eng {
+    font-family: dotum;
+}
+
+.dotum_kor {
+    font-family: "돋움";
+}
+
+/* 한글형식의 폰트명이나 공백이 포함된 폰트는 쌍따옴표("") 구분자 지정 */
+
+@font-face {
+    font-family: shizuru;
+    src: url(/font/Shizuru-Regular.ttf)
+}
+
+.shizuru {
+    font-family: shizuru;
+}
+
+.google_web_font {
+    font-family: 'Dancing Script', 'Dokdo', cursive;
+}
+
+.font_1 {
+    font: 50px 'Dokdo'
+}
+
+/* 형식: font: font-style font-variant font-weight font-size/line-height font-family */
+
+.font_2 {
+    font: italic normal bold 32px/100px 'Dancing Script';
+}
+

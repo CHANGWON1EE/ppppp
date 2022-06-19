@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img[src="image/jeep_logo.png"] {
+            width: 150px;
+            display: none;
+            
+            /* 이미지에 대한 크기는 width / height 중 하나만 변경해도 원본 이미지에 맞추어 자동으로 다른 속성의 비율로 조정
+            해당 요소가 컨텐츠 영역을 차지하지 않으면서 숨김 */
+        }
+
+        h2:nth-of-type(1):hover+img {
+            display: inline-block;
+        }
+
+        img[src="image/starbucks_logo.jpg"] {
+            width: 200px;
+            visibility: hidden;
+
+            /* <visibility>
+                - hidden: 해당 요소가 컨텐트 영역을 차지한 상태로 숨김
+                - visible: visibility 속성의 디폴트 값 */
+        }
+
+        h2:nth-of-type(2):hover+img {
+            visibility:visible
+        }
+
+        img[src="image/bg3.jpg"] {
+            width: 200px;
+            display: none;
+        }
+
+        h2:nth-of-type(3):hover+img {
+            display: inline-block;
+        }
+
+        em {
+            visibility: hidden;
+        }
+
+        h2:last-of-type:hover+em{
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>display(none), visibility(hidden, visible)</h1>
+    <hr>
+
+    <h2>JEEP</h2>
+    <img src="image/jeep_logo.png" alt="JEEP LOGO">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ullam fuga rem natus modi non porro alias
+        esse
+        cum deserunt ut, facere voluptatibus tenetur in ea repellat, asperiores suscipit laborum.
+    </p>
+    <hr>
+
+    <h2>STARBUCKS</h2>
+    <img src="image/starbucks_logo.jpg" alt="JEEP LOGO">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ullam fuga rem natus modi non porro alias
+        esse
+        cum deserunt ut, facere voluptatibus tenetur in ea repellat, asperiores suscipit laborum.
+    </p>
+    <hr>
+
+    <h2>FLOWER</h2>
+    <img src="image/bg3.jpg" alt="FLOWER">
+    <p>
+        Cupidatat consequat laboris occaecat excepteur. Tempor laborum ad non amet quis. Aliqua ipsum occaecat do voluptate. Sint pariatur occaecat do aliqua cillum magna esse non incididunt sint. Duis commodo id nisi quis qui occaecat excepteur dolore.
+
+Adipisicing cupidatat sint qui amet et cillum in sint. Anim cupidatat nisi amet eu eiusmod fugiat excepteur qui ullamco esse non. Dolore consequat exercitation dolor consectetur anim commodo sit nisi. Reprehenderit magna pariatur incididunt tempor ut excepteur aute in minim reprehenderit adipisicing excepteur dolore. Magna voluptate nulla in sit exercitation ex non irure qui aliqua mollit voluptate in.
+
+Velit esse laboris commodo mollit adipisicing sit pariatur. Duis sunt cupidatat culpa exercitation incididunt cupidatat cillum commodo sunt ad velit laboris consectetur nulla. Enim eiusmod sit deserunt ipsum eu elit excepteur dolore tempor consectetur laboris adipisicing cupidatat laborum.
+    </p>
+    <hr>
+
+    <h2>TEST</h2>
+    <em>Id ipsum et laboris consequat id. Nulla veniam magna aliquip commodo excepteur adipisicing id dolor qui aliquip aliquip adipisicing mollit ut. Consequat incididunt aute eiusmod quis nulla qui minim anim laboris. Esse anim occaecat Lorem sint sunt culpa. Occaecat anim aute deserunt qui eu Lorem ut duis. Excepteur et magna consectetur enim tempor pariatur exercitation aliquip veniam veniam reprehenderit officia. Nisi sunt eu reprehenderit et qui ut laboris cupidatat pariatur.
+
+Ut dolor dolor aliquip ullamco est voluptate id velit deserunt. Cillum laboris aute cillum id fugiat cupidatat duis qui reprehenderit ut exercitation. Officia pariatur officia pariatur magna duis velit esse fugiat eiusmod tempor esse aliqua sit et. Aute proident anim in ex excepteur elit commodo ex. Quis adipisicing aliqua amet velit sint adipisicing Lorem et sint deserunt enim. Tempor id dolor labore duis magna. Aute minim nulla velit ad ut aute exercitation officia eiusmod in laboris aliquip commodo esse.</em>
+</body>
+</html>

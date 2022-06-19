@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+   <h1>표만들기</h1>
+<pre>
+   table태그 : 표의 시작과 끝
+   tr태그 : 행 추가
+   td태그 : 열 추가 (데이터 세팅)
+   th태그 : 테이블 헤더. 라는 뜻으로 보통 엑셀최상단 데이터컬럼명 쓸때 쓰는 용도
+   colgroup태그 : 행을 그룹으로 만든다.
+   rowgroup태그 : 열을 그룹으로 만든다.
+   caption태그 : 표의 제목
+   
+   thead : 테이블 대가리
+   tbody : 테이블 몸통
+   tfoot : 테이블 밑바닥
+   
+   속성
+   width : 수평길이
+   height : 수직길이
+   border : 테두리 굵기
+   cellspacing : td간의 간격을 조절해줌.
+   
+   span : 인라인 (띄어쓰기 없음)
+     ㄴ span="2" 라면 해당방면으로 1칸 더 포함한다. 라는 의미다.
+     ㄴ 예시1로서 태그 내부에 <!-- <col span="2">, <row span="2"> --> 등으로도 쓰이고
+     ㄴ 예시2로서 태그 내부에
+     <!-- <td colspan="2">, <td rowspan="2">,
+           <div colspan="2">, <div rowspan="2"> --> 등으로도 쓰인다.
+           
+   div : 블록 (띄어쓰기 존재)
+   
+</pre>
+<table style="width:600px; border:10; cellspacing:10px;" >
+   <caption>표의 제목</caption>
+   <colgroup>
+      <col style="background-image:url(../img/samdasu.jpg); width:20%;">
+      <col span="2" style="background-color:green; width:20%;">
+      <col span="2" style="background-color:yellow; width:20%;">
+   </colgroup>
+   <thead>
+      <tr>
+         <th>데이터셀 강조1</th>
+         <th>데이터셀 강조2</th>
+         <th>데이터셀 강조3</th>
+         <th>데이터셀 강조4</th>
+         <th>데이터셀 강조5</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>데이터셀 내용1번줄1</td>
+         <td>데이터셀 내용1번줄2</td>
+         <td>데이터셀 내용1번줄3</td>
+         <td>데이터셀 내용1번줄4</td>
+         <td>데이터셀 내용1번줄5</td>
+      </tr>
+      <tr>
+         <td>데이터셀 내용2번줄1</td>
+         <td>데이터셀 내용2번줄2</td>
+         <td>데이터셀 내용2번줄3</td>
+         <td>데이터셀 내용2번줄4</td>
+         <td>데이터셀 내용2번줄5</td>
+      </tr>
+   </tbody>
+   <tfoot>
+      <tr>
+         <td>데이터셀 하단1</td>
+         <td>데이터셀 하단2</td>
+         <td>데이터셀 하단3</td>
+         <td>데이터셀 하단4</td>
+         <td>데이터셀 하단5</td>
+      </tr>
+   </tfoot>
+</table>
+</body>
+</html>

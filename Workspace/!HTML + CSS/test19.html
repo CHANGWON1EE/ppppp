@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        video {
+            width: 1500px;
+        }
+    </style>
+</head>
+    
+<body>
+    <h1>멀티미디어</h1>
+    <h2>동영상 플레이1</h2>
+
+    <video src="video/wave.mp4" controls autoplay muted></video>
+
+    <hr>
+
+    <h2>동영상 플레이2</h2>
+
+    <video src="video/wave.mp4" controls muted autoplay>
+        해당 브라우저에서는 지원되지 않는 형식의 파일입니다.
+    </video>
+    <hr>
+
+    <h2>동영상 플레이3</h2>
+
+    <video muted autoplay>
+        <source src="wave.ogv" type="video/ogv">
+        <source src="wave.webM" type="viedo/webM">
+        <source src="video/wave.mp4" type="video/mp4">
+        <p>
+            해당 브라우저에서는 지원되지 않는 형식의 파일입니다.
+        </p>
+    </video>
+    <hr>
+
+    <h2>동영상 플레이4</h2>
+
+    <video src="video/wave.mp4" controls muted autoplay poster="image/wave.JPG" preload="none">
+        <p>
+            해당 브라우저에서는 지원되지 않는 형식의 파일입니다.
+        </p>
+    </video>
+
+    <audio src="music/beethoven_remix.mp3" controls muted preload="none">
+        <p>
+            해당 브라우저에서는 지원되지 않는 형식의 파일입니다.
+        </p>
+    </audio>
+</body>
+</html>

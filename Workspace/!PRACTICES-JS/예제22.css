@@ -1,0 +1,84 @@
+.scrollTop {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0;
+}
+
+.scrollTop.visibility:hover {
+    width: 70px;
+    height: 65px;
+    line-height: 65px;
+    text-align: center;
+
+    opacity: .1;
+}
+
+.visibility{
+    height: 30%;
+    opacity: 1;
+
+    width: 50px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+
+    background-color: aquamarine;
+    color: coral;
+    border-radius: 30%;
+    transition: all 1s .2s;
+    cursor: pointer;
+    /* transition: .2s ease-out; */ /* 위와 같음 */
+}
+
+.scrollBox {
+    display: none;
+    background-color: bisque;
+    width: 150px;
+    height: 70px;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    text-align: center;
+    line-height: 35px;
+    color: red;
+  }
+
+/* 어떤 클래스 명이 존재할때 보이게끔 미리css를 짜놓는다 */
+
+/* < window.innerWidth, window.innerHeight >
+
+- 브라우저창의 부가요소(제목표시줄, 도구상자, 스크롤바)를 제외한 순수한 디스플레이
+창의 너비와 높이를 반환 => window 객체는 생략 가능 */
+
+/* =================================================================================================== */
+/* answer */
+
+/* .scrollTop {
+    width: 50px;
+    height: 40px;
+    background-color: cornflowerblue;
+    color: coral;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 40px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    visibility: hidden;
+
+    transition: opacity .5s ease-out, width, .7 ease-out;
+
+    opacity: 0;
+}
+
+.scrollTop.visible {
+    opacity: .6;
+    cursor: pointer;
+    visibility: visible;
+}
+
+.scrollTop.visible:hover {
+    opacity: 1;
+    width: 70px;
+} */

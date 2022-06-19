@@ -1,0 +1,27 @@
+div {
+    text-align: center;
+    line-height: 100vh;
+}
+
+h1 {
+    background: url(/image/bg1.jpg) no-repeat center/500px 700px;
+    text-indent: -9999em;
+    border: solid 2px;
+    width: 500px;
+    height: 700px;
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: middle;   
+}
+
+a {
+    background-color: cadetblue;
+    display: inline-block;
+    vertical-align: middle;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

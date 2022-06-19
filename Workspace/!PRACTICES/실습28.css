@@ -1,0 +1,40 @@
+.container {
+    width: 430px;
+    height: 430px;
+    background-color: crimson;
+    display: flex;
+    flex-flow: column-reverse wrap-reverse;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.container div {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    color: aquamarine;
+    /* text-align: center; */
+    /* line-height: 100px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .container div:not(:nth-of-type(4n)) {
+    margin-left: 10px;
+}
+
+.container div:not(:nth-of-type(4n)) {
+    margin-top: 10px;
+} */
+
+/* 부모 요소가 block 요소일 경우에만 clear 지정 */
+
+/* 4의 배수마다
+not을 이용해서 margin right를 제외
+
+12이하 13이상
+
+float 부모 요소
+
+색 지정하려면 clear 이용 */

@@ -1,0 +1,36 @@
+img {
+    width: 500px;
+    height: 500px;
+}
+
+div {
+    text-align: center;
+}
+    
+/* a {
+    background-color: rgb(128, 128, 128);
+    color: blueviolet;
+    width: 2em;
+    line-height: 2em;
+    display: inline-block;
+    text-decoration: none;
+}
+   
+a:not([href^="#"]) {
+    background-color: rgba(128, 128, 128, 0.3);
+    color: blue;
+} */
+
+a {
+    background-color: rgba(128, 128, 128, 0.3);
+    color: blueviolet;
+    width: 2em;
+    line-height: 2em;
+    display: inline-block;
+    text-decoration: none;
+}
+
+a[href^="#"] {
+    background-color: gray;
+    color: blue;
+}

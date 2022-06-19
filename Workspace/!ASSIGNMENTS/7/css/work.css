@@ -1,0 +1,238 @@
+* {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+.container {
+
+    width: 1920px;
+}
+header,
+main,
+footer {
+    display: flex;
+    flex-flow: column;
+}
+
+/* 스크롤 */
+.scrollTop {
+    width: 50px;
+    height: 38px;
+    position: fixed;
+    bottom : 30px;
+    right : 20px;
+    background: url(../work/스크롤.png.jpg) 0/cover;
+    text-indent: -9999em;
+}
+/* 헤더 */
+
+header div{
+    background: url(../work/상단.png) no-repeat 0/cover;
+    height: 136px;
+    justify-content: center;
+    display: flex;
+}
+
+header div {
+    margin-bottom: 25px;
+}
+
+.sns {
+    display: inline-flex;
+}
+
+.main h1 {
+    width: 92px;
+    height: 92px;
+    text-indent: -9999em;
+    margin-top: calc((120px - 72px)/2);
+}
+
+#logo {
+    background: url(../work/베스킨로고.jpg) no-repeat 0/cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+nav {
+    margin-bottom: 150px;
+}
+
+
+nav>ul>li {
+    float: left;
+    margin-left: 50px;
+    margin-right: 40px;
+}
+
+nav>ul::after {
+    content: "";
+    display: block;
+    clear: left;
+}
+
+
+nav>ul {
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    font: 15px Oswald, Nanum Gothic;
+    color: #6667ab;
+    width: 100%;
+}
+
+nav ul ul {
+    display: none;
+    height: 300px;
+    line-height: 50px;
+}
+
+
+nav>ul>li li:hover {
+    color: hotpink;
+}
+
+nav>ul:hover ul {
+    position: absolute;
+    font: Nanum Gothic;
+    background-color: white;
+    width: 350px;
+    display: block;
+}
+
+.ice {
+    background: url(../work/메뉴바.jpg) no-repeat 0/208px 274px;
+    width: 208px;
+    height: 274px;
+    text-indent: -9999em;
+}
+
+/* 메인상단*/
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+.btn input {
+    display: inline-block;
+    margin-left: 20px;
+    background: url(../work/before.png) no-repeat 0/cover;
+    width: 36px;
+    height: 56px;
+    text-indent: -9999em;
+    border-style: none;
+}
+.btn input+input {
+    display: inline-block;
+    background: url(../work/next.png) no-repeat 0/cover;
+    width: 36px;
+    height: 56px;
+    text-indent: -9999em;
+    border-style: none;
+}
+
+/* 메인중앙 */
+
+aside {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 25px;    
+}
+
+.subTitle {
+    display: flex;
+    justify-content: center;
+    flex-wrap:nowrap;
+    margin-bottom: 50px;
+}
+
+.subTitle div {
+    display: flex;
+    flex-direction: row;
+}
+.sub,.sub1,.sub2,.sub3 {
+    border: 1px solid;
+    margin-left: 15px;
+}
+
+.sub h3 {
+    background: url(../work/하단베너.jpg) no-repeat 0/288px 289px;
+    width: 288px;
+    height: 289px;
+    text-indent: -9999em;
+}
+
+.sub1 h3 {
+    background: url(../work/하단베너1.jpg) no-repeat 0/288px 289px;
+    width: 288px;
+    height: 289px;
+    text-indent: -9999em;
+}
+.sub2 h3 {
+    background: url(../work/하단베너2.jpg) no-repeat 0/288px 289px;
+    width: 288px;
+    height: 289px;
+    text-indent: -9999em;
+}
+.sub3 h3 {
+    background: url(../work/하단베너3.jpg) no-repeat 0/288px 289px;
+    width: 288px;
+    height: 289px;
+    text-indent: -9999em;
+}
+
+/* 메인하단 */
+
+article {
+    display: flex;
+    justify-content: center;
+}
+
+article div h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+article div span {
+    background: url(../work/매장찾기.jpg) no-repeat 0/599px 261px;
+    display: inline-block;
+    text-indent: -9999em;
+    width: 599px;
+    height: 261px;
+    border: 1px solid;
+    margin-left: 10px;
+}
+
+article div+div span {
+    background: url(../work/딜리버리서비스.jpg) no-repeat 0/599px 261px;
+    display: inline-block;
+    text-indent: -9999em;
+    width: 599px;
+    height: 261px;
+    border: 1px solid;
+    margin-left: 10px;
+}
+
+/*  footer */
+
+footer {
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+footer h2 {
+    background: url(../work/하단인포.png) no-repeat 0/cover ;
+    text-indent: -9999em;
+    width: 1920px;
+    height: 331px;
+}
+

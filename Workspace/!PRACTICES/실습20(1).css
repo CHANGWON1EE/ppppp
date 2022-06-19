@@ -1,0 +1,76 @@
+header, main, footer {
+    background-color: aquamarine;
+    width: calc(1024px * 0.8);
+    height: 20vh;
+    margin: 0 auto;
+    text-align: center;
+}
+
+main {
+    height: 60vh;
+}
+
+.starbucks {
+    background: url(/image/starbucks_logo.jpg) no-repeat;
+    background-size: 150px 120px;
+    display: inline-block;
+    width: 150px;
+    height: 120px;
+    text-indent: -9999px;
+}
+
+ul {
+    display: inline-block;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+li a {
+    display: inline-block;
+}
+
+li a {
+    background-image: url(/image/hp_menu.jpg);
+    width: 108px;
+    height: 38px;
+    text-indent: -9999px;
+    margin-right: 20px;
+    
+}
+
+.coffee {
+    background-position: -3px -3px; 
+}
+
+.menu {
+    background-position: -112px -3px;
+}
+
+.store {
+    background-position: -222px -3px;
+}
+
+.what_s_new {
+    background-position: -332px -3px;
+}
+
+.coffee:hover {
+    background-position: -3px -42px;
+}
+
+.menu:hover {
+    background-position: -112px -42px;
+}
+
+.store:hover {
+    background-position: -222px -42px;
+}
+
+.what_s_new:hover {
+    background-position: -332px -42px;
+}

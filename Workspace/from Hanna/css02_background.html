@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+	/*	background-repeat:no-repeat;
+		background-position:right top;
+	    background-position:center bottom; */
+	    
+	   
+	    /*
+	    background-repeat:
+	    ㄴ  
+	    ㄴ  
+	    
+	    background-image:url(상대경로);
+	    ㄴ URL경로에 있는 이미지파일을 읽어와서 배경으로서 출력한다.
+	    
+	    background-position:x좌표 y좌표
+	    ㄴ  left, right, top, bottom, center 등의 방향으로서도 설정이 가능하고 디폴트는 center
+	    ㄴ  즉 background-position:left => background-position:left center 같은 의미다.
+	    ㄴ  하지만 같은 방향을 두개 누른다고 하여 중앙정렬되진 않는다 (center, center)
+	    ㄴ  x값, y값은 서로 뒤에 %, cm, px, em등을 붙여서 표현한다
+	    
+	    */
+	     
+	    /*
+	    background-attachment: scroll | fixed | local | initial | inherit
+	    
+	    scroll : 선택한 요소와 같이 움직입니다. 내용을 스크롤하면 배경 이미지는 스크롤되지 않습니다.
+		fixed : 움직이지 않습니다.
+		local : 선택한 요소와 같이 움직입니다. 내용을 스크롤하면 배경 이미지도 스크롤됩니다.
+		initial : 기본값으로 설정합니다.
+		inherit : 부모 요소의 속성값을 상속받습니다.
+		
+		=====
+		
+		속성 그룹화 : 이미 위에서 백그라운드라는 스타일시트에 지정된 프로퍼티 순서대로 값을 넣을 수 있다.
+		
+		Background: 속성
+		
+		가능한 프로퍼티 (순서)
+		ㄴcolor
+		ㄴimage:url
+		ㄴrepeat
+		ㄴposition
+		ㄴattachment
+		ㄴsize
+		
+		사용할때는 프로퍼티는 빼주고 안에 넣을 값만 넣어준다
+		ex) background:#ddd url(../img/1.jpg) no-repeat fixed;
+					   color / image:URL경로  /  repeat / attachment
+	    */
+
+	body{
+		background-color:#ddd;
+		background-image:url(../img/jeju_map.jpg);
+		background-position:left top;
+		background-repeat:no-repeat;
+		background-position:50% 30%;
+		background-attachment:fixed;
+		background-size:100% 100%;
+		
+		/*스타일시트 속성 그룹화*/
+		background:#ddd url(../img/1.jpg) no-repeat fixed;
+		
+		background-size:300px 300px;
+		background-position:50% 30%;
+	}
+	body>img{
+		width:100px;
+		height:100px;
+	}
+</style>
+</head>
+<body>
+	<h1>background속성</h1>
+	<pre>
+	
+	</pre>
+	<img src="../img/AmegameCharging.jpg"><br/>
+	<img src="../img/AmegameCharging.jpg">
+</body>
+</html>

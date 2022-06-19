@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+   body{
+      margin:10px;
+   }
+   div{
+      width : 200px;
+      height : 200px;
+      color : red;
+      font-weight : bold;
+      float : left;
+   }
+</style>
+</head>
+<!-- 
+
+css : (cascading style sheets) 스타일시트라고 하며 html에서 태그별로 style=""
+     으로 추가하던것을 코드의 재사용성 및 일괄변경을 위해 표준화한 기술. 
+선택자 : html head태그-style태그 내에서 일괄적으로 css기능을 입혀 사용하기 위한 대상지정방법 
+선택자의 종류 : tag명, id명, class명
+
+tag명 : body{}, div{}, table{}, p{} 등으로 사용
+id명 : 태그의 id값에 #을 붙여서 <div id="divTest01"> 일때 #divTest01{} 으로 씀
+class명 : 태그의 class값에 .을 붙여서 <div class="Yap"> 일때 .Yap{} 으로 씀
+
+선택자의 차이
+
+태그명 : 해당 태그에 속한 모든 하위객체들에게도 해당 스타일기능을 디폴트(기본값)로 상속시킨다.
+아이디명 : 태그별 중복된 id를 사용하면 안되기에 이미 상위태그에 디폴트 스타일이 지정되었을 때,
+        하나의 태그에만 style을 따로 사용할 때 씀.
+클래스명 : 100개의 태그에 중복된 1개의 클래스명을 사용해도 되므로(중복이 무한대로 가능)
+        2~3개의 스타일을 약 100개의 태그에 나눠줘야할때 사용함.
+
+백단(db)에서 쿼리문을 쓸때나, java를 할때에도 마찬가지지만 이 css도 들여쓰기 규칙이 있다.
+
+방법으로는 스타일 우선순위대로 위에서 아래로 맞춘다.
+
+1. 태그 스타일 : 상위태그 스타일지정하여 하위 모든 태그들도 디폴트로 지정
+2. id 스타일 : 해당 'id명'이 포함된 태그'만' 스타일지정
+3. 클래스 스타일 : 해당 'class명'이 포함된 모든 태그들에 스타일지정
+4. 타입 스타일 : 이미 스타일이 지정된 상위태그 밑의 하위태그를 추가로 스타일지정 할 경우
+
+※주의사항 : 스타일시트의 모든 속성이 상속되진 않음. (디폴트 스타일 설정시)
+
+ -->
+<body>
+   <div style="background-color:#dd6">1</div>
+   <div style="background-color:rgb(200, 230, 240)">2</div>
+   <div style="background-color:orange">3</div>
+   <div style="background-color:#6dd">4</div>
+</body>
+</html>

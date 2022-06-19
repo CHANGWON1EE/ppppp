@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인접 형제 결합자(Adjacent Sibling Combinator)</title>
+
+    <style>
+        h2+h3+h3 {
+            color:red;
+        }
+
+        dt+dd {
+            color: blue;
+        }
+
+        h1+h2 {
+            color: green;
+        }
+    </style>
+</head>
+    <!-- +: 결합자 / 앞에 있는 건(부모) 선택 불가능 -->
+
+<body>
+    <h1>인접 형제 결합자</h1>
+    <hr>
+
+    <h2>CSS</h2>
+    <h3>인라인 스타일 시트</h3>
+    <h3>내부 스타일 시트</h3>
+    <h3>외부 스타일 시트</h3>
+    <hr>
+
+    <dl>
+        <dt>인접 형제 결합자(Adjacent Sibling Combinator)</dt>
+        <dd>Anim Lorem eu aliquip sit veniam. Cupidatat est sit eiusmod duis sunt nulla duis culpa elit. Irure deserunt laborum cillum nisi ullamco quis. Nostrud excepteur velit mollit exercitation sint elit minim aliqua irure fugiat id ullamco. Labore ad adipisicing ut sit voluptate. Veniam aliqua proident consequat eu irure qui pariatur non.
+
+Magna aliqua consectetur deserunt sit proident tempor laborum duis elit. Velit dolor irure aute consectetur ad aliqua mollit aliqua cillum tempor ex quis ea. Amet officia voluptate sunt nulla duis dolor ipsum.</dd>
+    </dl>
+</body>
+
+</html>

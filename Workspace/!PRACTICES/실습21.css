@@ -1,0 +1,46 @@
+* {
+    margin:0;
+}
+header, main, footer {
+    width: calc(1024px*0.8);
+    margin: 0 auto;
+    text-align: center;
+}
+
+header, footer {
+    height: 20vh;
+    background-color: antiquewhite;
+    line-height: calc(100vh * .2);
+}
+
+main {
+    height: 60vh;
+}
+
+#section_article {
+    /* display: inline-block; */
+    width: 70%;
+    height: 100%;
+    float: left;
+}
+
+section {
+    height: 60%;
+    background-color: darkgrey;
+    line-height: calc(100vh*0.6*0.6);
+}
+
+article {
+    height: 40%;
+    background-color: cadetblue;
+    line-height: calc(100vh*0.6*0.4);
+}
+
+aside {
+    /* float: right; */
+    /* display: inline-block; */
+    /* width: 100%; */
+    height: 100%;
+    background-color: burlywood;
+    line-height: calc(100vh*0.6);
+}

@@ -1,0 +1,144 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+header, main, footer {
+    width: 1200px;
+}
+
+.big_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big_container ul:hover {
+    display: block;
+    position: absolute;
+
+}
+.big_container li:hover {
+    color: blue;
+}
+
+.logo_size {
+    width: 200px;
+    height: 40px;
+}
+
+ul {
+    background-color: #ffffff;
+    list-style: none;
+    font-weight: bold;
+}
+
+.container {
+    line-height: 60px;
+}
+
+.container ul {
+    display: none;
+    position: absolute;
+    background-color: #48d9fe;
+    padding: 0 20px;
+    margin-left: -20px;
+    font-size: 0.8em;
+}
+
+.container:hover ul {
+    display: block;
+    color: black;
+}
+
+dl {
+    /* background-color: #e0e0e0; */
+    background-color: #48d9fe;
+    font-size: 0.2em;
+    text-indent: -9999em;
+}
+
+section {
+    /* height: 340px; */
+    height: 200px;
+    display: flex;
+}
+
+section:nth-of-type(1) div:nth-child(1) {
+    background:url(image/section_image1.jpg) no-repeat 0/600px;
+    
+    flex: 1;
+    text-indent: -9999em;
+}
+
+section:nth-of-type(1) div:nth-child(1):hover {
+    opacity: 0.7;    
+}
+
+section:nth-of-type(1) div:nth-child(2) {
+    background:url(image/section_image2.jpg) no-repeat 0/600px;
+    
+    flex: 1;
+    text-indent: -9999em;
+}
+
+section:nth-of-type(1) div:nth-child(2):hover {
+    opacity: 0.7;    
+}
+
+/* ============================================================================= */
+
+section:nth-of-type(2) div:nth-child(1) {
+    background:url(image/section_image3.jpg) no-repeat 0/600px;
+
+    flex: 1;
+    text-indent: -9999em;
+}
+
+section:nth-of-type(2) div:nth-child(1):hover {
+    opacity: 0.7;
+}
+
+section:nth-of-type(2) div:nth-child(2) {
+    background:url(image/section_image4.jpg) no-repeat 0/600px;
+
+    flex: 1;
+    text-indent: -9999em;
+}
+
+section:nth-of-type(2) div:nth-child(2):hover {
+    opacity: 0.7;
+}
+
+/* ============================================================================= */
+
+section:nth-of-type(3) div:nth-child(1) {
+    background:url(image/section_image5.jpg) no-repeat 0/600px;
+
+    flex: 1;
+    text-indent: -9999em;
+}
+
+section:nth-of-type(3) div:nth-child(1):hover {
+    opacity: 0.7;
+}
+
+section:nth-of-type(3) div:nth-child(2) {
+    background:url(image/section_image6.jpg) no-repeat 0/600px;
+
+    flex: 1;
+    text-indent: -9999em;
+}
+
+section:nth-of-type(3) div:nth-child(2):hover {
+    opacity: 0.7;
+}
+
+/* ============================================================================= */
+
+footer {
+    background:url(image/footer.jpg) no-repeat 0/cover;
+    height: 920px;
+
+    text-indent: -9999em;
+}

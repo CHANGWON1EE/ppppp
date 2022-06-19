@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+}
+
+div {
+    position: relative;
+    margin: calc((100vh - 700px) / 2) calc((100% - 500px) / 2);
+}
+
+h1 {
+    background: url(/image/bg1.jpg) no-repeat center/500px 700px;
+    width: 500px;
+    height: 700px;
+    border: solid 2px;
+    box-sizing: border-box;
+    text-indent: -9999em;
+    position: relative;
+}
+
+a {
+    background-color: cadetblue;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    position: absolute;
+    top: calc((100% - 30px) / 2);
+}
+
+.button1 {
+    right: calc(100% + 20px);
+}
+
+.button2 {
+    left: calc(100% + 20px);
+}

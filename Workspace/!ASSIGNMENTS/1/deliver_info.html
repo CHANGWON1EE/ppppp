@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도리버리 :: 주문하기 ::</title>
+
+    <style>
+        .doje_logo_size {
+            width: 100px;
+            height: 50px;
+        }
+        span {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <a href="home.html"><img src="../1/doje_image/doje_logo.svg" class="doje_logo_size" alt="doje_logo"></a>
+        <!-- <input type="image" class="doje_logo_size" src="../1/doje_image/doje_logo.svg" alt="doje_logo"> -->
+        <span><strong><a href="home.html">도리버리 &#171; 도제 딜리버리 &#187;</a></strong></span>
+    </div>
+
+    <div>
+        <strong><a href="home.html">Home</a></strong>     
+        <strong><a href="order.html">Order</a></strong>
+        <strong><a href="../1/store_location/store_map.html">Store</a></strong>
+    </div>
+
+    <form action="../1/server_doje.html">
+        <fieldset>
+            <legend>주문 정보</legend>
+
+            <div>
+                <ul>
+                    <li>
+                        <label for="Name">성명</label>
+                        <input type="text" id="Name" name="Name" required size="2" placeholder="홍길동">
+                            <!-- <div>
+                                <strong><label for="ID">ID</label></strong>
+                                <input type="email" id="ID" name="ID" placeholder="이메일 주소 입력" required>
+                            </div> -->
+                    </li>
+                </ul>   
+            </div>
+            <hr>
+                
+            <div>
+                <ul>
+                    <li>
+                        <label for="phone_Number">연락처</label>
+                        <input type="text" size=1 value="010" readonly> &ndash;
+                        <input type="text" id="phone_Number" name="phone_Number" size=1 minlength="3" maxlength="4" required> &ndash;
+                        <input type="text" size=1 minlength="4" maxlength="4" required>
+                    </li>
+                </ul>
+            </div>            
+            <hr>
+
+            <div>
+                <ul>
+                    <li>
+                        <!-- <div>수령 방법 선택
+                            <input type="radio" name="delivery_option" id="delivery" value="delivery" checked>
+                            <label for="delivery">배송</label>
+                            <input type="radio" name="delivery_option" id="store" value="store">
+                            <label for="store">매장</label>
+                        </div> -->
+                        <div>
+                        <label>수령 방법 선택
+                            <input type="radio" name="delivery_option" id="store" value="store">매장
+                        </label>
+                        <label>
+                            <input type="radio" name="delivery_option" id="delivery" value="delivery" checked>배송
+                        </label>
+                        </div>
+                    </li>                      
+                    <li>
+                        <sub><strong><a href="../1/store_location/store_map.html">수령 가능한 매장 확인하기</a></strong></sub>
+                    </li>
+                </ul>
+            </div>
+            <hr>                 
+                    
+            <div>
+                <ul>
+                    <li>
+                        <label for="Address">주소(배송지)</label>
+                        <input type="text" name="Address" id="Address" size="60" required placeholder="매장에서 직접 수령할 경우 방문 하실 매장명을 정확히 입력해주세요.">
+                    </li>
+                </ul>
+            </div>
+            <hr>
+
+            <div>
+                <ul>
+                    <li>
+                        <label>배송 시 요청사항
+                            <input list="delivery_request" name="currentRequest">
+                        </label>
+            
+                        <datalist id="delivery_request">
+                            <option value="요청사항을 직접 입력합니다." selected></option>
+                            <option value="배송 전에 미리 연락 바랍니다."></option>
+                            <option value="부재 시 경비실에 맡겨 주세요."></option>
+                            <option value="부재 시 전화 주시거나 문자 남겨 주세요."></option>
+                        </datalist>
+                    </li>
+                </ul>
+            </div>
+
+            <p>
+                <sub>※도서산간 지역의 경우 추후 수령 시 추가 배송비가 과금될 수 있습니다.</sub>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>결제 수단</legend>
+
+            <div>
+                <ul>
+                    <li>일반 결제</li>
+                    <li>간편 결제</li>
+                </ul>
+            </div>
+        </fieldset>
+
+        <button>결제하기</button>
+    </form>
+</body>
+</html>

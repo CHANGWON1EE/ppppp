@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vw, vh 단위</title>
+
+    <style>
+        p {
+            background-color: gray;
+            
+            /* 블럭요소 p 태그로 브라우저 화면 전체를 채우기 위해 p 태그에 브라우저에서 기본적으로 지정되는 상/하 마진 삭제. */
+
+            /*  < Viewport >
+
+            - 웹 페이지가 장치나 플랫폼에 따라 브라우저를 통해 화면에 표시되는 디스플레이 영역
+            뷰포트는 브라우저 영역에서 스크롤바 영역까지를 모두 포함
+            단, body 의 영역은 스크롤바 영역을 포함하지 않음에 주의 */
+
+            /* vw(viewport width): 뷰포트 영역에서의 너비에 대한 백분율 지정 단위
+               vh(viewpor height): 뷰포트 영역에서의 높이에 대한 백분율 지정 단위 */
+
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+
+            /* body 는 별도의 크기 설정을 하지 않는 이상 스크롤 바를 제외한 뷰포트 영역 내에서 그 크기가
+               결정되고 브라우저에서 기본적으로 지정되는 마진으로 인해 기본적으로 뷰포트 영역 보다는
+               작을 수 밖에 없는 것이 일반적.
+               따라서 p 태그에 대한 100vw, 100vh 는 브라우저 디스플레이 영역 전체 너비와 높이를 영역으로
+               할당함으로써 부모가 되는 body 태그보다 영역이 더 커지는 현상으로 인해 화면영역을 벗어나게
+               되고 이는 수평과 수직에 대한 스크롤바가 생성되는 문제점 야기 */
+        
+        /* body {
+            margin: 0;
+        }
+
+        p {
+            background-color: gray;
+            margin: 0;
+            width: 100vw; - 스크롤바가 생성됨
+            height: 100vh;
+        } */
+    </style>
+</head>
+
+<body>
+    <p>
+        Non officia cupidatat est exercitation id aliqua elit et nostrud veniam sunt occaecat. Nostrud fugiat occaecat eu esse tempor culpa quis sunt nisi dolor veniam incididunt. Non qui voluptate irure adipisicing commodo nostrud. Irure sunt officia officia voluptate ut cillum enim amet sit et. Incididunt et non ipsum ullamco. Exercitation enim aute reprehenderit minim quis nisi proident Lorem. Non voluptate excepteur pariatur ad.
+
+Aute et exercitation cillum occaecat laboris nisi minim consectetur cupidatat quis ut quis. Sunt proident culpa officia esse minim excepteur id incididunt proident consectetur enim. Deserunt culpa cillum aliqua anim exercitation quis adipisicing nulla Lorem officia qui sit proident. Sit mollit amet aute id amet in et commodo. Adipisicing ea sit ex magna eu. Aliquip culpa proident labore ad labore ullamco nostrud.
+    </p>
+</body>
+</html>

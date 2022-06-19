@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+   <h1>입력양식 만들기</h1>
+   <pre>
+      클라이언트측 정보를 서버에서 가져갈 수 있도록 환결설정을 세팅한다.
+      
+      name : 변수
+      value : 값
+      maxlength : 입력할 수 있는 문자의 최대 갯수
+      readonly : 읽기 전용
+      disalbed : 비활성화
+      placeholder : 안내글
+      
+   </pre>
+   <a href="board.jsp?username=홍길동&num=250&userid=hong">서버로 정보 보내기</a>
+   <hr/>
+   <!-- 
+      action : form에서 submit이 발생하면 실행될 파일명
+      method : form의 데이터 전송방식으로서 get과 post 방식이 있다.
+      method="get" : 파라미터가 URL주소에 박힌다. 따라서 보안에 취약하나 http프로토콜을 사용가능하다.
+      method="post" : 파라미터를 숨기고 URL주소이동을 한다. 따라서 보안에 강하나, 세부페이지 이동이 불가능하다.
+      ㄴpost의 방식의, 상세페이지 이동불가 단점을 해결하고자 비동기방식이 생겨났다.
+      
+      input태그 타입 종류
+      1. 텍스트류 : text, password
+      2. 이벤트류 : checkbox, radio, range, button, reset, submit, hidden
+      3. 외부종류 : file, image
+      4. 날짜종류 : datetime-local, date, month, week,
+      5. 그외기타 : number, color
+      
+      =====
+      
+      1) 텍스트류
+      
+      text : 텍스트박스
+      password : ●●●●으로 입력되는 숨김텍스트박스
+      
+      -----
+      
+      2) 이벤트류 (id, class로 하여금 스크립트 함수, CSS스타일 등과 연결해서 사용함)
+      
+      checkbox : 체크박스(탭눌러서 여러종류중에 1개 클릭해서 선택하게 하는 상자)
+      radio : 동글뱅이 (○)를 눌러서 (●) 로 만들어 쓰는 이벤트계열 버튼
+      range : 수평막대기 (동글뱅이●로 범위조절 가능)
+      button : 버튼
+      reset : 'from태그 내의' 입력된 데이터를 초기화시키는 기능
+      submit : 'from태그 내의' 입력된 데이터를 서버(백단)에 전달하는 기능 
+      hidden : 필요해서 만들었는데 숨겨야 할때 (db의 리스트테이블의 순번을 name값으로 받았는데 리스트가 난잡해질걸 우려해서 name="num"을 지워야할때? 주로 사용)
+      
+      -----
+      
+      3) 외부종류
+      
+      file : 파일 찾아보기 버튼과 함께, 외부파일을 업로드 하는것이 가능한 기능 (버튼과 함께 씀)
+      image : 외부img파일을 경로로 붙여넣어 사용하는 일종의 버튼이자 이미지태그이다. 이걸 이벤트류 태그로 쓰기도 한다.
+      
+      -----
+      
+      4) 날짜종류 (달력나오게 함. 인풋버튼타입으로 연동시켜 해당 데이터 서버로 전송가능)
+      
+      datetime-local : 년, 월, 일, 시간
+      date : 년, 월, 일
+      month : 년, 월
+      week : 년, n번째 주 (해당 주 전체일수 선택)
+      
+      -----
+      
+      5) 그외기타
+      
+      number : 숫자를 올리고 내릴 수 있는 버튼이 2개 내장된 텍스트박스
+      color : RGB, HSL, HEX로 정의가 가능한 색상이 조정 가능한 인풋타입
+      
+      -----
+      =====
+      -----
+      
+      select 태그 : 셀렉트 박스를 생성함
+       ㄴ size속성을 추가하여 디스플레이에 보이는 수직범위를 증가시킬 수 있음
+       ㄴ multiple 속성을 추가하여 다중선택가능여부를 세팅할 수 있음
+       ㄴ 내부에 option태그로 셀렉트박스내의 데이터를 추가할 수 있음.
+       ㄴ option태그를 그룹으로 묶을땐 optgroup 태그를 이용함
+      
+      
+    -->
+   
+<form method="post" action="aaaa.jsp?tel=010-4567-8965">
+   아이디 : <input type="text" name="userid" placeholder="아이디를 입력하세요" 
+                  maxlength="10" size="10" required/>   
+   이름 : <input type="text" name="username" value="홍길동" disabled/>
+   비밀번호 : <input type="password" name="userpwd"><br/>
+   파일첨부 : <input type="file" name="filename"/><br/>
+   체크박스 : <input type="checkbox" name="hobby" value="농구"/> 농구
+         <input type="checkbox" name="hobby" value="축구" checked/> 축구
+         <input type="checkbox" name="hobby" value="배구"/> 배구
+   라디오버튼 : <input type="radio" name="email" value="yes" checked/> 동의
+          <input type="radio" name="email" value="no"/> 비동의
+   여러줄의 문자 입력 :
+         <textarea name="memo" cols="50" rows="5">글을 입력하세요.</textarea><br/>
+   리스트박스
+      <select name="Language" size="5" multiple>
+         <option value="java">자바</option>
+         <option>자바스크립트</option>
+         <option>html</option>
+         <option selected>css</option>
+         <option>jsp</option>
+      </select><!-- size:한번에 표시되는 목록 수, multiple:다중선택 -->
+   리스트 group : 
+      <select name="lang">
+         <optgroup label="프론트엔드">
+            <option>자바스크립트</option>
+            <option>html</option>
+            <option>css</option>
+         </optgroup>
+         <optgroup label="백엔드">
+            <option value="java">자바</option>
+            <option>jsp</option>
+         </optgroup>
+      </select>
+   <hr/>
+   date : <input type="date" name="date"/><br/>
+   datetime-local : <input type="datetime-local" name="date2"/><br/>
+   month : <input type="month" name="month"/><br/>
+   week : <input type="week" name="week"/><br/>
+   
+   color : <input type="color" name="color"/><br/>
+   number : <input type="number" name="num" min="10" max="20" step="2"/><br/>
+   range : <input type="range" name="ran" min="0" max="10" step="1" value="5" />
+   <hr/>
+   <!-- 전송버튼 : button, submit, image, button태그 -->
+   <input type="button" value="등록"/>
+   <input type="submit" value="등록"/>
+   <button>등록</button>
+   <input type="image" src="../img/naver.png"/>
+   <input type="reset" value="다시쓰기"/>
+   
+   <input type="hidden" name="data" value=gildong"/>
+</form>
+</body>
+</html>

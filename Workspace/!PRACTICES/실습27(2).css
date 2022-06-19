@@ -1,0 +1,50 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+header, main {
+    width: 600px;
+}
+
+ul {
+    background-color: darkslategray;
+    color: white;
+    list-style: none;
+}
+
+.container {
+    float: left;
+    list-style: none;
+    /* padding: 0px 40px; */
+    margin-left: 30px;
+    margin-right: 60px;
+    line-height: 40px;
+}
+
+nav>ul::after {
+    content: "";
+    display: block;
+    clear: left;
+}
+
+.container ul {
+    display: none;
+    background-color :cadetblue;
+    position: absolute;
+    padding: 0 10px;
+    margin-left: -10px;
+    font-size: 0.8em;
+}
+
+/* absolute의 부모는 static이 아닌 요소가 부모 요소일 때 */
+.container:hover ul {
+    display: block;
+}
+
+main {
+    text-align: justify;
+    word-break: break-all;
+    margin-top: 20px;
+}
+

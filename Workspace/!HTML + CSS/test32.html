@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 클래스 선택자</title>
+
+    <style>
+        h1:hover {
+            background-color: aqua;
+        }
+
+        form button:hover {
+            color:red;
+        }
+
+        form:hover label {
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        a:focus,
+        input:focus,
+        button:focus {
+            outline: none;
+            background-color: darkgray;
+        }
+
+        a:active {
+            background-color: orange;
+        }
+
+        a:visited {
+            color: red;
+        }
+
+        input:checked+label {
+            background-color: bisque;
+        }
+
+        #title:target {
+            text-decoration:underline;
+        }
+
+        button:enabled {
+            font-weight: bold;
+        }
+
+        button:disabled {
+            font-size: 10px;
+        }
+
+        form :not(button) {
+            background-color: chartreuse;
+        }
+
+        ol li:not([id="kt"]) {
+            font-weight: bold;
+            font-size: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">가상 클래스 선택자</h1>
+    <hr>
+    <!-- ul>(li[id]>a[target])*3 -->
+    <ul>
+        <li id="naver"><a href="http://www.naver.com">네이버</a></li>
+        <li id="daum"><a href="http://www.daum.net" target="_self">다음</a></li>
+        <li id="google"><a href="http://www.google.com" target="_blank">구글</a></li>
+    </ul>
+    <hr>
+
+    <ol>
+        <li id="samsung"><a href="https://www.samsung.com">삼성</a></li>
+        <li id="lg"><a href="https://www.lge.co.kr">LG</a></li>
+        <li id="kt"><a href="https://www.kt.com">KT</a></li>
+        <li><a href="https://www.hyundai.com">현대자동차</a></li>
+        <li><a href="https://www.hanwha.co.kr">한화</a></li>
+    </ol>
+    <hr>
+
+    <form action="#">
+        <div>
+            <label for="name" class="fontStyle color">이름</label>
+            <input type="text" id="name" placeholder="이름을 입력하세요">
+        </div>
+
+        <div>
+            <label class="color fontSize">주소
+                <input type="text" placeholder="주소를 입력하세요">
+            </label>
+        </div>
+
+        <div>
+            <label for="gender">남</label>
+            <input type="radio" name="gender" id="gender" value="man">
+
+            <label for="gender">여</label>
+            <input type="radio" name="gender" id="gender" value="woman">
+        </div>
+
+        <div>
+            <input type="radio" name="housing-type" id="housing-type" value="homeowner">
+            <label for="husing-type">자가</label>
+
+            <input type="radio" name="housing-type" id="housing-type" value="rental-house">
+            <label for="husing-type">임대</label>
+        </div>
+
+        <button type="reset" disabled>초기화</button>
+        <button>전송</button>
+    </form>
+    
+    
+    <p>Sit ut proident excepteur ea non esse culpa. Ea aliquip do occaecat ad in qui id sit ex labore commodo aute elit amet. Dolore incididunt reprehenderit culpa qui in. Consectetur sit non qui est non aute esse ad nostrud velit non ex nostrud.
+
+Velit dolor adipisicing aliqua est enim. Consectetur veniam ipsum culpa nulla ad enim dolor ex quis dolore labore ut in Lorem. Occaecat fugiat dolore ad esse laboris adipisicing elit excepteur adipisicing mollit ad laborum do.
+
+Eiusmod aliquip sint magna id. Elit magna veniam irure ut aute adipisicing sunt labore ullamco magna aliqua. Ad sint minim irure aute aliqua eiusmod. Duis culpa ullamco deserunt ut id labore culpa ex sint quis est consectetur. In tempor nostrud ad amet dolor sint aliqua pariatur culpa sit nisi veniam occaecat.
+
+Cillum duis dolore aliqua velit. Tempor duis amet cillum occaecat labore occaecat. Eiusmod ut sint sunt quis in exercitation. Adipisicing sunt commodo exercitation officia consequat officia duis aute est sit do ad amet do. Sunt aliquip cillum pariatur proident et in laborum labore proident et proident culpa occaecat amet. Nostrud commodo ipsum excepteur Lorem sit in commodo eiusmod in.
+
+Eu fugiat sint laboris elit ipsum nisi elit officia eiusmod. Incididunt commodo aute ullamco laborum nostrud est aliquip nisi consequat commodo deserunt. Et officia culpa deserunt proident excepteur. Non ut est excepteur consectetur ut consequat ea. Sunt elit proident minim non. Sit pariatur officia officia veniam dolor ullamco duis reprehenderit ad cillum nostrud. Reprehenderit enim ut nisi ipsum ullamco magna in.
+
+Consequat nulla voluptate velit cupidatat labore mollit. Fugiat esse cupidatat officia elit laboris officia ea labore. Culpa laborum irure ullamco cupidatat qui incididunt est. Tempor commodo laboris sint voluptate enim non laborum culpa enim. Quis in quis consectetur tempor Lorem. Commodo proident labore ipsum ad esse nostrud eu do reprehenderit do ad ullamco Lorem. Dolore Lorem magna veniam aliqua.
+
+Proident dolor labore veniam sint exercitation id aliqua et nulla nulla et. Eu ex exercitation aliqua exercitation veniam non culpa aliqua labore. Sunt laborum velit adipisicing ad veniam nulla.
+
+Aute velit Lorem eiusmod qui non aliqua eiusmod consectetur enim officia qui sint. Duis anim velit elit fugiat adipisicing ex. Officia culpa adipisicing labore qui aliquip ut ex consequat ullamco laborum laboris culpa duis. Duis nulla ipsum pariatur pariatur quis qui. Nisi consectetur amet eu velit. Cillum ex nisi velit dolor fugiat ex incididunt quis enim aute. Amet culpa dolor est velit eu do elit incididunt nostrud.
+
+Ullamco veniam labore eu aliqua Lorem reprehenderit. Laborum commodo laborum cupidatat deserunt minim nostrud fugiat reprehenderit amet magna veniam. Duis pariatur amet laboris commodo eiusmod ut laborum sunt minim labore anim anim. Aliquip magna enim amet dolore elit tempor commodo fugiat. Eu id dolor do eiusmod adipisicing elit reprehenderit cillum elit pariatur pariatur nulla laboris proident.
+
+Ex in laboris aliqua reprehenderit esse proident ea proident aliquip eiusmod veniam laboris dolore aute. Officia exercitation eiusmod sunt ad fugiat eu sint do. Laboris occaecat aliqua sit incididunt voluptate nisi ex veniam pariatur incididunt.
+    </p>
+
+    <a href="#title">제목으로</a>
+</body>
+
+</html>

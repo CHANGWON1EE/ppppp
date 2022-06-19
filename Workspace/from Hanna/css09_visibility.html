@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+/*
+
+visibility와 display의 차이
+'볼수 있음 vs 표시, 나타냄'의 차이
+
+1) visibility : 가시성을 결정 (그냥 대충 보이는 방식이라는 뜻)
+	visible: 보임
+	hidden: 숨김 (자신의 영역은 계속 차지)
+	collapse: 겹치도록 지정 (테이블에만 가능, 그 외에는 hidden으로 인식)
+	inherit: 부모 요소의 값을 상속
+	
+	비져빌러티는 딱보면 직관적으로 이해가 가능하니 패스한다.
+	단, 디스플레이는 확인해야 할 것이 있어 설명한다.
+	
+2) display : 어떻게 보여줄지를 결정 (그냥 대충 어떻게 출력할거냐는 뜻)
+	none : 보이지 않음 (영역지우기)
+	block : 블록 박스
+	inline : 인라인 박스
+	inline-block : block과 inline의 중간 형태
+
+	display: none   / 해당 태그의 스타일 영역을 말소함.
+	display: block  / 블럭화시켜 태그가 끝나면 줄바꿈 기능추가됨
+	display: inline / 해당 태그의 스타일 영역을 전부 제거, 데이터(ex 데이터)주변에만 영역 유지
+	display: inline-block / float처럼 옆으로 늘어서있게 보임
+	
+	간단하게 말하면 디스플레이는 어떠한 태그를 선택자로 쓰고 스타일을 적용시켰을때에...?
+	inline-block을 제외한 나머지 3개의 프로퍼티의 기능은 스타일을 제거해주는 기능이라고 보면 되겠다.
+	
+	none은 아예 안보이게 하면서 덤으로 영역까지 없애는 것이고
+	block은 패딩, 마진을 삭제해주고
+	inline은 데이터영역을 제외한 모든 영역의 스타일을 삭제해준다.
+	
+*/
+
+div{
+	width: 300px;
+	height: 300px;
+	border: 1px solid gray;
+}
+div:first-child{
+	background:yellow;
+	visibility:hidden;
+}
+div:nth-child(2){
+	background: pink;
+	display: none;
+}
+div:last-child{
+	background: orange;
+}
+
+</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

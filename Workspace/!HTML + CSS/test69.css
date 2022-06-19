@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border: red solid 1px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 100px;
+
+    /* 
+        < absolute >
+
+    - fixed 와 동일하게 문맥에서의 영역을 차지하지 않아 부모요소에서 높이를
+      인지하지 못하고 인라인 블럭요소처럼 컨텐트 크기만큼만을 디스플레이 영역
+      으로 표시되며 최초 디스플레이 시작 지점을 기준으로 옵셋의 기준 시작 지점이
+      달라지는 등의 모든 포지션 특성이 동일.
+      하지만 스크롤 생성 시 뷰포트 영역을 기준으로 고정되는 것이 아닌, 페이지
+      뷰포트 영역으로만 제한되어 스크롤 이동에 따른 요소가 페이지에 고정되어
+      표시되는 것을 확인 가능.
+
+    ※ 스크롤바가 생성되지 않은 상태에서의 페이지 뷰포트 영역이 기준이 되므로,
+       스크롤바가 생성시에는 그 위치가 변경되거나 화면상에 보이지 않을 수 있음에
+       주의.
+       ( p 태그가 div box 태그 위에 존재할 때 스크롤 생성시 확인 가능 )
+    */
+
+    position: absolute;
+}
+
+.b1 {
+    left: 0;
+}
+
+.b2 {
+    right: 0;
+}
+
+.b3 {
+    bottom: 0;
+}
+
+.b4 {
+    right: 0;
+    bottom: 0;
+}
+
+body {
+    margin: 10px;
+}
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+/*
+
+반응형 스타일 적용하기
+
+@media : 일종의 if문과 궤를 같이함. 뒤에 달린 프로퍼티들에 따라 이벤트 작동함
+
+@media 속성 종류
+	1. all    : 모든 장치에 적합
+	2. print  : 인쇄 결과물 같은 문서파일형에 적합
+	3. screen : 주로 웹사이트 화면에 적합
+	4. speech : 음성 합성장치에 적합
+
+@media 논리연산자 종류
+	1. and    : A and B 라고 할때, A와 B 모두 긍정이면 이벤트 작동. 이라는 의미
+	2. not    : A not B 라고 할때, A와 B 모두 부정이면 이벤트 작동. 이라는 의미
+	3. only   : only A only B 라고 할때, A만 긍정이면 이벤트 작동. 이라는 의미
+	4. ,(쉼표) : A, B, C 라고 할때, 셋중 하나만 맞아도 이벤트 작동. 이라는 의미
+	
+반응형 웹페이지 세팅할때 주로 하는 방법
+
+(예시규격)
+width 기준 320px  : 스마트폰
+width 기준 768px  : 아이패드 and 노트북
+width 기준 1024px : 웹사이트
+
+=====
+
+@media 문법 (종류로서 세팅)
+
+@media	all		and		A조건	and		B조건	and		C조건	{}
+		print	not		A조건	not		B조건	not		C조건	{}
+		screen	only	A조건	only	B조건	only	C조건	{}
+		speech			A조건	,		B조건	,		C조건	{}
+		
+예시규격을 바탕으로 예문 작성해보겠음
+ex1) @media all and (min-width:320px) and (max-width:767px){}
+ex2) @media all and (min-width:768px) and (max-width:1023px){}
+ex3) @media all and (min-width:1024px) {}
+
+ex1 : 모든장치에서 사용가능하며 320~767px 범위에서 {}내의 스타일시트를 적용하라
+ex2 : 모든장치에서 사용가능하며 768~1023px 범위에서 {}내의 스타일시트를 적용하라
+ex3 : 모든장치에서 사용가능하며 1024이상의 범위에서 {}내의 스타일시트를 적용하라
+
+*/
+
+body, ul, li{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+img{
+	background-color: #ddd;
+}
+li{
+	background-color: #fff;
+	border: 1px solid gray;
+	margin: 5px;
+}
+@media all and (min-width:320px) and (max-width:767px){
+	li{
+		background: yellow;
+	}
+	img{
+		width: 100%;
+	}
+}
+@media all and (min-width:768px) and (max-width:1023px){
+	li{
+		background: #000;
+		color: #f00;
+	}
+	img{
+		width: 30%;
+	}	
+}
+@media all and (min-width:1024px) {
+	li{
+		background: pink;
+		color: green;
+		font-weight: bold;
+	}
+	img{
+		width: 20%;
+	}
+}
+	
+</style>
+</head>
+<body>
+	<ol type="I">
+		<li>뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기</li>
+		<li>뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기</li>
+		<li>뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기</li>
+		<li>뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기</li>
+		<li>뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기</li>
+		<li>뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기</li>
+	</ol>
+	<img src="../img/1.jpg"/>
+	<img src="../img/2.jpg"/>
+</body>
+</html>

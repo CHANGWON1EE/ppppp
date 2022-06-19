@@ -1,0 +1,38 @@
+ul {
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 2px;
+    /* list-style: none; */
+}
+
+span {
+    display: inline-block;
+    background-color: rgb(100, 148, 237, 0.5);
+    color: white;
+    width: 100px;
+    /* height: 50px; */
+    line-height: 50px;
+    text-align: center;
+}
+
+img {
+    display: none;
+}
+
+span:hover {
+    background-color: royalblue;
+}
+
+/* li:hover>img {
+    display: block;
+} */
+
+span:hover+img {
+    display: block;
+    width: 180px;
+    height: 180px;
+    margin: 20px 0 20px 100px;
+}
+

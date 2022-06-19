@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내부 스타일 시트</title>
+
+    <style>
+        /* 태그 선택자 - 내가 지정한 모든 태그에 적용*/
+        /* 브라우저 기본 폰트 크기: 16px */
+        body {
+            color: fuchsia;
+            text-align: center;
+        }
+
+        ol {
+            color: darkcyan;
+            text-align: left;
+        }
+
+        div {
+            font-size: 200%;
+        }
+        /* 식별자 */
+        #childsize {
+            font-size: 50%;
+        }
+
+        div>p {
+            font-size: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Inline Style Sheet</p>
+    
+    <hr>
+
+    <ol>
+        <li>목록</li>
+        <li>목록</li>
+        <li>목록</li>
+        <li>목록</li>
+    </ol>
+
+    <hr>
+
+    <!-- div 요소의 컨텐츠는 부모 요소(body)의 font-size 16px에 대한 2배 비율이 되는 32px 적용 -->
+
+    <div>div 폰트사이즈
+        <!-- p 요소의 컨텐츠는 부모(div)의 다시 0.5배에 해당하는 비율이 적용되므로 16px 적용 -->
+        <p id="childsize">문단 폰트사이즈</p>
+    </div>
+</body>
+</html>

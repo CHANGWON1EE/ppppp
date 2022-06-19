@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 700px;
+   height: 150px;
+   background-color: antiquewhite;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    background-color: cornflowerblue;
+   width: 50px;
+   height: 50px;
+   border: 1px solid;
+   box-sizing: border-box;
+   border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftBox, .rightBox {
+    background-color: rgb(209, 184, 120);
+}
+
+.leftBox {
+    width: 115px;
+    height: 115px;
+
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+
+    align-self: center;
+    margin-left: calc((150px - 115px)/2);
+}
+
+.rightBox {
+    width: 225px;
+    height: 60px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: end;
+    margin: 0 calc((150px - 115px)/2) calc((150px - 115px)/2);
+}

@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-M6GQB2M&amp;gtm_auth=opxbH85cveE6aAHmANIUHQ&amp;gtm_preview=env-2&amp;gtm_cookies_win=x"></script><script type="text/javascript" async="" src="https://www.googleadservices.com/pagead/conversion_async.js"></script><script src="https://connect.facebook.net/signals/config/2020095734680719?v=2.9.60&amp;r=stable" async=""></script><script src="https://connect.facebook.net/signals/plugins/identity.js?v=2.9.60" async=""></script><script src="https://connect.facebook.net/signals/plugins/microdata.js?v=2.9.60" async=""></script><script src="https://connect.facebook.net/signals/plugins/identity.js?v=2.9.60" async=""></script><script src="https://connect.facebook.net/signals/plugins/inferredevents.js?v=2.9.60" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-TJDXPP4"></script><script type="text/javascript" async="" src="https://ssl.nexon.com/s1/livewebjs/GnxVisitorTracking.min.js"></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        
+        <title>크레이지아케이드</title>
+        <meta name="keywords" content="크레이지아케이드, crazy arcade, 크아">
+        <meta name="description" content="크레이지아케이드">
+        <link rel="Shortcut Icon" href="https://ssl.nexon.com/s2/game/ca/ca2019/common/favicon.ico" type="image/x-icon">
+        <meta property="og:title">
+        <meta property="og:url">
+        <meta property="og:image">
+        <meta property="og:description">
+        <link rel="stylesheet" href="https://ssl.nexon.com/s3/Game/ca/2019/common.css">   
+    
+    
+        <script src="https://ssl.nexon.com/s1/game/ca/jquery.min.js"></script>
+        <script src="https://ssl.nexon.com/s1/game/ca/TweenMax.min.js"></script>
+        <script src="https://ssl.nexon.com/s1/game/ca/2019/common.js"></script>
+        <script src="https://ssl.nexon.com/s1/game/ca/2019/CAcommon.js?v=1"></script>    
+        
+        <link rel="stylesheet" href="https://ssl.nexon.com/s3/kart_v2/event/jquery.mCustomScrollbar.css">    
+        <link rel="stylesheet" href="https://ssl.nexon.com/s3/game/ca/swiper.min.css">
+        <link rel="stylesheet" href="https://ssl.nexon.com/s3/Game/ca/2019/main.css?v=1"><!-- 메인만 -->
+        <script src="https://ssl.nexon.com/s1/game/ca/swiper-bundle.min.js"></script>
+        <script type="text/javascript" src="https://ssl.nexon.com/s1/game/ca/2019/main.js?v=1"></script><!-- 메인만 -->
+        <script type="text/javascript" src="https://ssl.nexon.com/s1/game/ca/mCustomScrollbar.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+        
+        <script type="text/javascript" src="https://ssl.nexon.com/s1/global/ngb_head.js"></script><script src="https://ssl.nexon.com/s1/global/ngb_headstart.js?v=1652805015718" type="text/javascript"></script><script src="https://platform.nexon.com/ajax/npf_auth_c.js" type="text/javascript"></script><script charset="euc-kr" src="https://logins.nexon.com/login/page/ngb_login.aspx" type="text/javascript"></script><script src="https://ssl.nexon.com/s1/global/ngb_RSAHash.js" type="text/javascript"></script><script charset="euc-kr" src="https://logins.nexon.com/scripts/captchalogin" type="text/javascript"></script><script charset="euc-kr" src="https://ssl.nexon.com/s1/global/ngb_pcbanglogin.js?v=20181015" type="text/javascript"></script><script charset="euc-kr" src="https://ssl.nexon.com/s1/global/ngb_util.js?v=20190903" type="text/javascript"></script><script charset="euc-kr" src="https://ssl.nexon.com/s1/member/nxmember.js?v=20200111" type="text/javascript"></script><script charset="euc-kr" src="https://ssl.nexon.com/s1/External/makePCIDCookie.js" type="text/javascript"></script><script src="https://ssl.nexon.com/s1/da/a2s.js" type="text/javascript"></script>
+        <script type="text/javascript" src="https://ssl.nexon.com/s1/p2/ps.min.js" charset="utf-8" data-name="PS" data-ngm="true" data-nxlogin="true"></script><script type="text/javascript" charset="euc-kr" src="https://platform.nexon.com/common/platform.js"></script><script type="text/javascript" charset="euc-kr" src="https://platform.nexon.com/ngm/js/NGMModuleInfo.js"></script><script type="text/javascript" charset="euc-kr" src="https://platform.nexon.com/ngm/js/npf_ngm.js"></script><script type="text/javascript" charset="utf-8" src="https://ssl.nexon.com/s1/p2/util.min.js" data-name="PSUtil"></script>    
+        
+        <script type="text/javascript">
+            var CaFacebookauthConfig = true;
+    
+        $(function () { $.ajaxSetup({ cache: false }); });
+    
+        window.loginType = '-1';
+        </script>
+        
+    
+    
+        <script type="text/javascript">
+            var CAMain = new function () {            
+                this.RankingClick = function () {
+                    var rtype = $(".ca_ranking .btns .active").attr("data-url").toLowerCase().replace("/ranking/", "");
+                    var servercode = $(".ca_ranking .server .active").attr("data-value");
+                    $(".ca_ranking .rank_list").load("/Home/MainRanking", { rtype: rtype, servercode: servercode });
+                }
+                this.ItemCllick = function (otype) {                
+                    $("#item_listData").load("/Home/MainItem", { otype: otype }, function () { });
+                    $(".ca_tem .tem_list").mCustomScrollbar("scrollTo", 0);
+                }
+                this.VODClick = function () {
+                    var $obj = $(".ca_movie .mySwiper");
+                    if (Number($obj.attr("data-lastpage") > Number($obj.attr("data-page")))) {
+                        $.ajax({
+                            url: '/Home/MainVOD', method: 'post', async: false, data: { page: Number($obj.attr("data-page")) + 1 }
+                            , success: function (data) {                            
+                                $obj.attr("data-lastpage", $(data).find(".mySwiper").attr("data-lastpage"));
+                                $obj.attr("data-page", $(data).find(".mySwiper").attr("data-page"));
+                                var _update = false;
+                                $.each($(data).find(".swiper-wrapper .swiper-slide"), function () {
+                                    if ($(".swiper .swiper-slide[data-id=" + $(this).attr("data-id") + "]").length == 0) {
+                                        var _target = $(this).closest(".swiper-slide");
+                                        //$obj.find(".swiper-wrapper").append(_target.clone());
+                                        camainvodswiper.appendSlide(_target.clone());
+                                        _update = true;
+                                    }
+                                });
+                                if (_update) {camainvodswiper.update();camainvodswiper.updateSlides(); }
+                            }
+                        });
+                    }
+                }
+            }
+            var camainvodswiper;
+    
+            $(function () {
+                if ($(".mySwiper").length > 0) {
+                    camainvodswiper = new Swiper(".mySwiper", {
+                        slidesPerView: "auto",
+                        scrollbar: {
+                            el: ".swiper-scrollbar",
+                            draggable: true,
+                        },
+                        speed: 600,
+                        navigation: {
+                            nextEl: ".slide_next",
+                            prevEl: ".slide_prev",
+                        }
+                    });
+                    camainvodswiper.on('reachEnd', function () { CAMain.VODClick(); });
+    
+                }
+            });
+         
+    
+        </script>
+    
+    
+        <!-- Google Tag Manager -->
+    <script>
+    (function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+    'gtm.start':
+    new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TJDXPP4');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Ads: 865780361 -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-865780361"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'AW-865780361');
+    </script>
+    <!-- Event snippet for 랜딩 페이지 유입 conversion page -->
+    <script>
+      gtag('event', 'conversion', {'send_to': 'AW-865780361/RjVfCNOpyYYBEImF65wD'});
+    </script>
+    <!-- Event snippet for 게임 실행 버튼 클릭 conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-865780361/hbQDCKS5yYYBEImF65wD',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+    <!--End Global site tag (gtag.js) - Google Ads: 865780361 -->
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-45568966-9', 'auto');
+      ga('set', 'dimension1', '0');
+      ga('set', 'dimension2', document.domain);
+      ga('send', 'pageview');
+    </script>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        CaFacebookauthConfig = CaFacebookauthConfig == undefined ? true : CaFacebookauthConfig; 
+        fbq('set', 'autoConfig', CaFacebookauthConfig, '2020095734680719');
+        fbq('init', '2020095734680719');
+        fbq('track', 'PageView');
+    
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=2020095734680719&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+        
+    <script async="" src="https://static.hotjar.com/c/hotjar-1327448.js?sv=6"></script><link rel="stylesheet" type="text/css" href="https://rs.nxfs.nexon.com/gnb/css/gnb.css"><script type="text/javascript" charset="utf-8" src="https://js.nexon.com/s1/p2/ngm-layer.min.js" data-name="NgmRunLayer"></script><script async="" src="https://script.hotjar.com/modules.a86ea56cf93e306544c2.js" charset="utf-8"></script><script async="" src="https://rs.nxfs.nexon.com/gnb/js/jquery/1.9.1/jquery.min.js"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/865780361/?random=1652805016046&amp;cv=9&amp;fst=1652805016046&amp;num=1&amp;bg=ffffff&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=864&amp;u_w=1536&amp;u_ah=834&amp;u_aw=1536&amp;u_cd=24&amp;u_his=5&amp;u_tz=540&amp;u_java=false&amp;u_nplug=5&amp;u_nmime=2&amp;gtm=2oa5g0&amp;sendb=1&amp;ig=1&amp;data=event%3Dgtag.config&amp;frm=0&amp;url=https%3A%2F%2Fca.nexon.com%2FHome%2FIndex&amp;ref=https%3A%2F%2Fca.nexon.com%2FEvent_20220428%2FEvent2&amp;tiba=%ED%81%AC%EB%A0%88%EC%9D%B4%EC%A7%80%EC%95%84%EC%BC%80%EC%9D%B4%EB%93%9C&amp;hn=www.googleadservices.com&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><script async="" src="https://rs.nxfs.nexon.com/gnb/js/jquery.nanoscroller/0.8.7/jquery.nanoscroller.min.js"></script><script async="" src="https://rs.nxfs.nexon.com/common/js/publicbanner.min.js" data-gamecode="720896" data-id="publicbanner" data-ispublicbanner="true"></script><script src="https://www.googleadservices.com/pagead/conversion/865780361/?random=1652805016048&amp;cv=9&amp;fst=1652805016048&amp;num=1&amp;label=RjVfCNOpyYYBEImF65wD&amp;bg=ffffff&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=864&amp;u_w=1536&amp;u_ah=834&amp;u_aw=1536&amp;u_cd=24&amp;u_his=5&amp;u_tz=540&amp;u_java=false&amp;u_nplug=5&amp;u_nmime=2&amp;gtm=2oa5g0&amp;sendb=1&amp;ig=1&amp;data=event%3Dconversion&amp;frm=0&amp;url=https%3A%2F%2Fca.nexon.com%2FHome%2FIndex&amp;ref=https%3A%2F%2Fca.nexon.com%2FEvent_20220428%2FEvent2&amp;tiba=%ED%81%AC%EB%A0%88%EC%9D%B4%EC%A7%80%EC%95%84%EC%BC%80%EC%9D%B4%EB%93%9C&amp;auid=2141987232.1652799159&amp;hn=www.googleadservices.com&amp;async=1&amp;rfmt=3&amp;fmt=4"></script>    
+</head>
+
+<body>
+    <script type="text/javascript" src="https://ssl.nexon.com/s1/global/ngb_bodystart.js" charset="euc-kr"></script>
+    <!-- skip -->
+    <div id="skip">
+        <a href="#header">메뉴 바로가기</a>
+        <a href="#container">콘텐츠 바로가기</a>
+    <!-- </div><div class="gnbWrapper gnbSizeL" style="min-width: 1064px;"><div class="gnbBar"><h1 class="gnbLogo"><a href="https://www.nexon.com/Home/Game" obj="P_GNB" opt="{&quot;Name&quot;:&quot;Nexon&quot;,&quot;Type&quot;:&quot;Logo_Default&quot;,&quot;PageCode&quot;:&quot;720896&quot;}"><img src="https://rs.nxfs.nexon.com/gnb/images/logo_nexon.png" alt="NEXON"></a></h1><div class="gnbBarLeft"><div class="gnbAllmenu" id="gnbAllmenu"><a href="#gnbAllLayer" obj="P_GNB" opt="{&quot;Name&quot;:&quot;AllMenu&quot;,&quot;Type&quot;:&quot;Open&quot;,&quot;PageCode&quot;:&quot;720896&quot;}"><span class="gnbIcon"></span><span>메뉴</span></a></div></div><div class="gnbBarRight"><div class="gnbPcbang"><div><span class="gnbIcon gnbIconPcbang"></span><span class="gnbHiddenName">PC방</span><span class="gnbPcbangOff"><span class="gnbAcchidden">OFF</span></span></div></div><div class="gnbJoin"><a href="https://member.nexon.com/join/join.aspx" obj="P_GNB" opt="{&quot;Name&quot;:&quot;Join&quot;,&quot;PageCode&quot;:&quot;720896&quot;}">넥슨 회원가입</a></div><div class="gnbLogin"><a href="https://nxlogin.nexon.com/common/login.aspx?redirect=https%3A%2F%2Fca.nexon.com%2FHome%2FIndex" obj="P_GNB" opt="{&quot;Name&quot;:&quot;Login&quot;,&quot;PageCode&quot;:&quot;720896&quot;}">넥슨 로그인</a></div></div></div><div class="gnbDimmedLayer" style="visibility: hidden;"></div><div class="gnbAllLayer gnbStatePc" id="gnbAllLayer" style="visibility: hidden;"><div class="gnbScroll gnbAllScroll has-scrollbar"><div class="gnbScrollContent" tabindex="0" style="right: -17px;"><div class="gnbGameTab"><ul><li class="gnbBtPc" obj="P_GNB" opt="{&quot;Name&quot;:&quot;AllMenu&quot;,&quot;Type&quot;:&quot;PCGame&quot;,&quot;PageCode&quot;:&quot;720896&quot;}"><a href="#gnbListPc">PC 게임</a></li><li class="gnbBtMobile" obj="P_GNB" opt="{&quot;Name&quot;:&quot;AllMenu&quot;,&quot;Type&quot;:&quot;MobileGame&quot;,&quot;PageCode&quot;:&quot;720896&quot;}"><a href="#gnbListMobile">모바일 게임</a></li></ul><a href="http://help.nexon.com" obj="P_GNB" opt="{&quot;Name&quot;:&quot;AllMenu&quot;,&quot;Type&quot;:&quot;Help&quot;,&quot;PageCode&quot;:&quot;720896&quot;}">고객센터</a></div></div><div class="gnbScrollPane" style="display: none;"><div class="gnbScrollSlider" style="height: 677px; transform: translate(0px, 0px);"></div></div></div><div class="gnbListService"><h2 class="gnbAcchidden">서비스</h2><ul><li obj="P_GNB" opt="{&quot;Name&quot;:&quot;AllMenu&quot;,&quot;Type&quot;:&quot;Member&quot;,&quot;PageCode&quot;:&quot;720896&quot;}"><a href="https://member.nexon.com/home/index.aspx"><span class="gnbIcon gnbIconService1"></span>내정보</a></li><li obj="P_GNB" opt="{&quot;Name&quot;:&quot;AllMenu&quot;,&quot;Type&quot;:&quot;Event&quot;,&quot;PageCode&quot;:&quot;720896&quot;}"><a href="http://event.nexon.com"><span class="gnbIcon gnbIconService2"></span>이벤트</a></li><li obj="P_GNB" opt="{&quot;Name&quot;:&quot;AllMenu&quot;,&quot;Type&quot;:&quot;NexonCash&quot;,&quot;PageCode&quot;:&quot;720896&quot;}"><a href="https://member.nexon.com/cash/chargeguide.aspx?ST=p2&amp;PS=utility&amp;a2soi=GNB_CASH_N"><span class="gnbIcon gnbIconService3"></span>넥슨캐시</a></li><li obj="P_GNB" opt="{&quot;Name&quot;:&quot;AllMenu&quot;,&quot;Type&quot;:&quot;Security&quot;,&quot;PageCode&quot;:&quot;720896&quot;}"><a href="https://security.nexon.com"><span class="gnbIcon gnbIconService4"></span>보안센터</a></li><li obj="P_GNB" opt="{&quot;Name&quot;:&quot;AllMenu&quot;,&quot;Type&quot;:&quot;Notice&quot;,&quot;PageCode&quot;:&quot;720896&quot;}"><a href="http://notice.nexon.com"><span class="gnbIcon gnbIconService5"></span>공지사항</a></li><li obj="P_GNB" opt="{&quot;Name&quot;:&quot;AllMenu&quot;,&quot;Type&quot;:&quot;NexonPlug&quot;,&quot;PageCode&quot;:&quot;720896&quot;}"><a href="http://help.nexon.com/Download/NexonPlug"><span class="gnbIcon gnbIconService9"></span>넥슨플러그</a></li><li obj="P_GNB" opt="{&quot;Name&quot;:&quot;AllMenu&quot;,&quot;Type&quot;:&quot;Help&quot;,&quot;PageCode&quot;:&quot;720896&quot;}"><a href="http://help.nexon.com"><span class="gnbIcon gnbIconService7"></span>고객센터</a></li><li obj="P_GNB" opt="{&quot;Name&quot;:&quot;AllMenu&quot;,&quot;Type&quot;:&quot;Calendar&quot;,&quot;PageCode&quot;:&quot;720896&quot;}"><a href="http://event.nexon.com/event/CalendarMonth.aspx"><span class="gnbIcon gnbIconService8"></span>넥슨달력</a></li><li obj="P_GNB" opt="{&quot;Name&quot;:&quot;AllMenu&quot;,&quot;Type&quot;:&quot;NexonPlay&quot;,&quot;PageCode&quot;:&quot;720896&quot;}"><a href="http://nexonplay.nexon.com"><span class="gnbIcon gnbIconService6"></span>넥슨플레이</a></li></ul><a class="gnbBtAll" href="https://www.nexon.com/Home/Sitemap" obj="P_GNB" opt="{&quot;Name&quot;:&quot;AllMenu&quot;,&quot;Type&quot;:&quot;Sitemap&quot;,&quot;PageCode&quot;:&quot;720896&quot;}">전체서비스</a></div><div class="gnbLayerBt"><a href="#" obj="P_GNB" opt="{&quot;Name&quot;:&quot;AllMenu&quot;,&quot;Type&quot;:&quot;Close&quot;,&quot;PageCode&quot;:&quot;720896&quot;}"><span class="gnbIcon"></span><span class="gnbAcchidden"></span></a></div></div><div class="gnbMyLayer" id="gnbMyLayer"><div class="gnbMyinfo"></div><div class="gnbScroll gnbMyScroll has-scrollbar"><div class="gnbScrollContent gnbListMy" tabindex="0" style="right: -17px;"><div class="gnbCell"><h2>보안</h2><ul><li><a href="https://member.nexon.com/security/authblock.aspx" obj="P_GNB" opt="{&quot;Name&quot;:&quot;MyInfo&quot;,&quot;Type&quot;:&quot;MVNOBlock&quot;,&quot;PageCode&quot;:&quot;720896&quot;}">알뜰폰 인증 차단<span class="gnbMyStateNew">NEW</span></a></li><li><a href="https://member.nexon.com/security/loginblock.aspx" obj="P_GNB" opt="{&quot;Name&quot;:&quot;MyInfo&quot;,&quot;Type&quot;:&quot;LoginBlock&quot;,&quot;PageCode&quot;:&quot;720896&quot;}">해외 로그인 차단</a></li><li><a href="https://member.nexon.com/security/idblock.aspx" obj="P_GNB" opt="{&quot;Name&quot;:&quot;MyInfo&quot;,&quot;Type&quot;:&quot;IDBlock&quot;,&quot;PageCode&quot;:&quot;720896&quot;}">아이디 생성잠금</a></li><li><a href="https://member.nexon.com/security/cashblock.aspx" obj="P_GNB" opt="{&quot;Name&quot;:&quot;MyInfo&quot;,&quot;Type&quot;:&quot;CashBlock&quot;,&quot;PageCode&quot;:&quot;720896&quot;}">넥슨캐시 보안설정</a></li><li><a href="https://security.nexon.com/playpass/index.aspx" obj="P_GNB" opt="{&quot;Name&quot;:&quot;MyInfo&quot;,&quot;Type&quot;:&quot;NexonOTP&quot;,&quot;PageCode&quot;:&quot;720896&quot;}">넥슨 OTP</a></li></ul></div><div class="gnbCell"><h2>캐시</h2><ul><li><a href="https://member.nexon.com/cash/chargeguide.aspx?ST=p2&amp;PS=utility&amp;a2soi=GNB_CASH_N"><span obj="P_GNB" opt="{&quot;Name&quot;:&quot;MyInfo&quot;,&quot;Type&quot;:&quot;NexonCash_Title&quot;,&quot;PageCode&quot;:&quot;720896&quot;}">넥슨캐시</span></a></li><li>플레이포인트 <span class="gnbTooltip"><a href="#" obj="P_GNB" opt="{&quot;Name&quot;:&quot;MyInfo&quot;,&quot;Type&quot;:&quot;PlayPoint&quot;,&quot;PageCode&quot;:&quot;720896&quot;}"><span class="gnbIcon"></span></a><span class="gnbTooltipCnts">넥슨플레이 앱에서 이벤트를 통해 적립되는<br>포인트입니다. <a href="http://nexonplay.nexon.com/index.aspx" obj="P_GNB" opt="{&quot;Name&quot;:&quot;MyInfo&quot;,&quot;Type&quot;:&quot;NexonPlay_Info&quot;,&quot;PageCode&quot;:&quot;720896&quot;}">넥슨플레이 소개보기</a></span><span class="gnbTooltipDeco"></span></span></li></ul><div class="gnbChargeBt"><a href="#" obj="P_GNB" opt="{&quot;Name&quot;:&quot;MyInfo&quot;,&quot;Type&quot;:&quot;Charge&quot;,&quot;PageCode&quot;:&quot;720896&quot;}">충전</a> <a href="#" obj="P_GNB" opt="{&quot;Name&quot;:&quot;MyInfo&quot;,&quot;Type&quot;:&quot;AutoCharge&quot;,&quot;PageCode&quot;:&quot;720896&quot;}">자동충전<span>최대 +5%</span></a></div></div></div><div class="gnbScrollPane" style="display: none;"><div class="gnbScrollSlider" style="height: 822px; transform: translate(0px, 0px);"></div></div></div><div class="gnbLayerBt"><a href="#" obj="P_GNB" opt="{&quot;Name&quot;:&quot;MyInfo&quot;,&quot;Type&quot;:&quot;Close&quot;,&quot;PageCode&quot;:&quot;720896&quot;}"><span class="gnbIcon"></span><span class="gnbAcchidden"></span></a></div></div></div> -->
+    <!-- GNB -->
+    <script type="text/javascript" src="https://rs.nxfs.nexon.com/common/js/gnb.min.js" charset="utf-8" data-name="GNB" data-skiptocontentsid="skip" data-gamecode="720896" data-width="1280" data-ispublicbanner="true"></script>
+    <!-- //GNB -->
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJDXPP4"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div id="wrapper" class="main">
+        <!-- header -->
+        <div id="header" style="margin-left: 0px; width: 100%;">
+            <h1 class="logo"><a href="javascript:void(CACommon.GoMain());">크레이지아케이드</a></h1>
+            <!-- nav -->
+            <div class="nav" style="width: 1278px;">
+                <h2 class="blind">전체 메뉴</h2>
+                <ul>
+                    <li>
+                        <a href="/News/Notice/List" class="dep1" style="padding-left: 62px; padding-right: 62px;">소식<span style="width: 40px; margin-left: -28px;"></span></a>
+                        <ul>
+                            <li><a href="/News/Notice/List">공지</a></li>
+                            <li><a href="/News/Event/List">이벤트</a></li>
+                            <li><a href="/News/Monthly/List">월간크아</a></li>                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/Info/Game" class="dep1" style="padding-left: 62px; padding-right: 62px;">정보<span style="width: 40px; margin-left: -28px;"></span></a>
+                        <ul>
+                            <li><a href="/Info/Game">소개</a></li>
+                            <li><a href="/Info/Character">도감</a></li>
+                            <li><a href="/Info/Guide">배우기</a></li>
+                            <li><a href="/Info/WallPaper">달력</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/Ranking/CAJJang" class="dep1" style="padding-left: 62px; padding-right: 62px;">랭킹<span style="width: 40px; margin-left: -28px;"></span></a>
+                        <ul>
+                            <li><a href="/Ranking/CAJJang">크아짱랭킹</a></li>
+                            <li><a href="/Ranking/Total">종합랭킹</a></li>
+                            <li><a href="/Ranking/Ladder">래더랭킹</a></li>
+                            <li><a href="/Ranking/LadderSeason">래더짱랭킹</a></li>
+                            <li><a href="/Ranking/Winning">연승 무한랭킹</a></li>
+                            <li><a href="/Ranking/WinningSeason">연승 대회랭킹</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/Free/List" class="dep1" style="padding-left: 62px; padding-right: 62px;">게시판<span style="width: 59px; margin-left: -37.5px;"></span></a>
+                        <ul>
+                            <li><a href="/Free/List">자유</a></li>                            
+                            <li><a href="/QnA/List">질문과 답변</a></li>
+                            <li><a href="/FashionKing/List">패션왕</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/Support" class="dep1" style="padding-left: 62px; padding-right: 62px;">고객지원<span style="width: 79px; margin-left: -47.5px;"></span></a>
+                        <ul>
+                            <li><a href="/Support">고객문의</a></li>
+                            <li><a href="/Support/Download">다운로드</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- //nav -->
+            <!-- tip -->
+            <div class="tip">
+                <a href="/Info/Account">
+                    <span class="txt"><span>크아의 계정 정보 </span> <span>자세히 알고 싶어요!</span></span>
+                    <span class="img"></span>
+                </a>
+            </div>
+            <!-- //tip -->
+            <span class="bg1"></span><span class="bg2"></span>
+        </div>
+        <!-- //header -->
+        <div id="container">
+            <!-- common-->
+            <div id="common">
+                <!-- game start-->
+                <div id="game_start" style="margin-right: 0px;">
+                    <div class="btns" style="background-position-y: -5720px;">
+                        <span class="glow"></span>
+                        <button type="button" class="btn_start" onclick="CACommon.GameStart();" style="transform: matrix(1, 0, 0, 1, 0, 0);">게임시작</button>
+                        <button type="button" class="btn_launcher" onclick="CACommon.GameClientStart();" style="opacity: 0;">런처실행</button>
+                    </div>
+                </div>
+
+                <!-- log info -->
+                <div class="log_info">
+                    <h2 class="blind">로그 정보</h2>
+                    <div class="btn_area" style="margin-right: 0px;">
+                            <button type="button" class="btn btn_login" onclick="CACommon.GoLogin();">로그인</button>                        
+                        
+                    </div>
+
+                </div><!-- //log info -->
+<div class="banner" id="main_banner">
+    <h2 class="blind">진행 중인 프로모션</h2>
+    <ul class="viewer">
+
+        <li class="item active" style="background: url(&quot;https://lwi.nexon.com/ca/banner/2022/0428/event_savetheearth_4B5XHJO551TI3834.jpg&quot;) center top no-repeat rgb(248, 244, 238); display: none;">
+            
+            <!-- 이미지url, 배경컬러 관리자 입력 -->
+            <a href="https://ca.nexon.com/Event_20220428/Event2" target="_self">
+                <span class="desc" style="color:#f05743;">
+                    <!-- 폰트컬러 관리자 입력 -->
+                    <span class="category" style="opacity: 0; transform: matrix(1, 0.00017, -0.00017, 1, 0, 10);">이벤트 </span>
+                    <span class="time" style="opacity: 0; transform: matrix(1, 0.00017, -0.00017, 1, 0, 10);">2022.04.28 ~ 2022.06.01<span class="bg"></span></span>
+                    <span class="tit">
+                            <span class="l1"><span style="opacity: 0; transform: matrix(1, 0.00017, -0.00017, 1, 0, 60);">세이브 디 어스</span></span>
+                            <span class="l2"><span style="opacity: 0; transform: matrix(1, 0.00017, -0.00017, 1, 0, 60);">With 동물자유연대</span></span>
+                         
+                                                
+                    </span>
+                    <span class="txt" style="opacity: 0;">동물자유연대와 함께 멸종 위기 동물들의 밀렵을 막아주세요!</span>
+                </span>
+                <span class="align"></span>
+            </a>
+        </li>
+        <li class="item " style="background: url(&quot;https://lwi.nexon.com/ca/banner/2022/0428/event_superlei_3A0473T501UDBSP2.jpg&quot;) center top no-repeat rgb(251, 220, 235); display: none;">
+            
+            <!-- 이미지url, 배경컬러 관리자 입력 -->
+            <a href="https://ca.nexon.com/Event_20220428/Event1" target="_self">
+                <span class="desc" style="color:#000000;">
+                    <!-- 폰트컬러 관리자 입력 -->
+                    <span class="category" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 10);">이벤트 </span>
+                    <span class="time" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 10);">2022.04.28 ~ 2022.06.01<span class="bg"></span></span>
+                    <span class="tit">
+                            <span class="l1"><span style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 60);">슈퍼 레이</span></span>
+                         
+                                                
+                    </span>
+                    <span class="txt" style="opacity: 0;">슈퍼 레이가 환상의 붐힐 마을에 초대합니다.</span>
+                </span>
+                <span class="align"></span>
+            </a>
+        </li>
+        <li class="item " style="background: url(&quot;https://lwi.nexon.com/ca/banner/2022/0428/event_treasureisland_L172U8H72Q21VI65.jpg&quot;) center top no-repeat rgb(17, 159, 235); display: none;">
+            
+            <!-- 이미지url, 배경컬러 관리자 입력 -->
+            <a href="https://ca.nexon.com/Event_20220428/Event3" target="_self">
+                <span class="desc" style="color:#ffffff;">
+                    <!-- 폰트컬러 관리자 입력 -->
+                    <span class="category" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 10);">이벤트 </span>
+                    <span class="time" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 10);">2022.04.28 ~ 2022.05.18<span class="bg"></span></span>
+                    <span class="tit">
+                            <span class="l1"><span style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 60);">크린이</span></span>
+                            <span class="l2"><span style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 60);">보물섬</span></span>
+                         
+                                                
+                    </span>
+                    <span class="txt" style="opacity: 0;">5월에는 보물섬에서 함께 해요!</span>
+                </span>
+                <span class="align"></span>
+            </a>
+        </li>
+        <li class="item " style="background: url(&quot;https://lwi.nexon.com/ca/banner/2022/0502/007_ca_1920x670.jpg&quot;) center top no-repeat rgb(81, 75, 208); display: list-item;">
+            
+            <!-- 이미지url, 배경컬러 관리자 입력 -->
+            <a href="https://playgeto.com/getopoint/promotion/coupon.html" target="_self">
+                <span class="desc" style="color:#ffffff;">
+                    <!-- 폰트컬러 관리자 입력 -->
+                    <span class="category" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 10);">이벤트 </span>
+                    <span class="time" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 10);">2022.05.02 ~ 2022.05.31<span class="bg"></span></span>
+                    <span class="tit">
+                            <span class="l1"><span style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 60);">플레이게토에</span></span>
+                            <span class="l2"><span style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 60);">쿠폰 도착!</span></span>
+                         
+                                                
+                    </span>
+                    <span class="txt" style="opacity: 0;">PC방 포인트와 쿠폰 동시에 받고 고속 성장하세요!</span>
+                </span>
+                <span class="align"></span>
+            </a>
+        </li>
+        <li class="item " style="background: url(&quot;https://lwi.nexon.com/ca/banner/2022/0303/event_drop_3D9AE7AC7621D288.jpg&quot;) center top no-repeat rgb(255, 195, 0); display: none;">
+            
+            <!-- 이미지url, 배경컬러 관리자 입력 -->
+            <a href="https://ca.nexon.com/News/Event/Content/1399" target="_self">
+                <span class="desc" style="color:#622ba2;">
+                    <!-- 폰트컬러 관리자 입력 -->
+                    <span class="category" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 10);">이벤트 </span>
+                    <span class="time" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 10);">2022.03.03 ~ 2022.06.01<span class="bg"></span></span>
+                    <span class="tit">
+                            <span class="l1"><span style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 60);">드랍더템</span></span>
+                            <span class="l2"><span style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 60);">시즌1</span></span>
+                         
+                                                
+                    </span>
+                    <span class="txt" style="opacity: 0;">템 내려온다~ 템이 내려온다~ DROP THE TEM!</span>
+                </span>
+                <span class="align"></span>
+            </a>
+        </li>
+        <li class="item " style="background: url(&quot;https://lwi.nexon.com/ca/banner/2022/0512/event_cazzang_2010C5EF18DC2BFA.jpg&quot;) center top no-repeat rgb(5, 20, 34); display: none;">
+            
+            <!-- 이미지url, 배경컬러 관리자 입력 -->
+            <a href="https://ca.nexon.com/News/Event/Content/1411" target="_self">
+                <span class="desc" style="color:#ffffff;">
+                    <!-- 폰트컬러 관리자 입력 -->
+                    <span class="category" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 10);">이벤트 </span>
+                    <span class="time" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 10);">2022.05.12 ~ 2022.07.06<span class="bg"></span></span>
+                    <span class="tit">
+                            <span class="l1"><span style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 60);">2022 시즌2</span></span>
+                            <span class="l2"><span style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 60);">크아짱 오픈!</span></span>
+                         
+                                                
+                    </span>
+                    <span class="txt" style="opacity: 0;">2022년 크아짱 시즌2가 시작됩니다!</span>
+                </span>
+                <span class="align"></span>
+            </a>
+        </li>
+        <li class="item " style="background: url(&quot;https://ssl.nexon.com/s2/game/ca/2019/banner/event_newbie_BC81306AD88A44C2.jpg&quot;) center top no-repeat rgb(255, 192, 0); display: none;">
+            
+            <!-- 이미지url, 배경컬러 관리자 입력 -->
+            <a href="http://ca.nexon.com/board/2097152023/1274/" target="_self">
+                <span class="desc" style="color:#6e3300;">
+                    <!-- 폰트컬러 관리자 입력 -->
+                    <span class="category" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 10);">이벤트 </span>
+                    <span class="time" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 10);">2019.07.18 ~ 2023.01.31<span class="bg"></span></span>
+                    <span class="tit">
+                            <span class="l1"><span style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 60);">신규 유저 </span></span>
+                            <span class="l2"><span style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 60);"> 혜택 안내</span></span>
+                         
+                                                
+                    </span>
+                    <span class="txt" style="opacity: 0;">거기! 처음오신분?! 지금 신규 가입 하시면 <br> 모든 아이템을 선물로 드려요!</span>
+                </span>
+                <span class="align"></span>
+            </a>
+        </li>
+        <li class="item " style="background: url(&quot;https://ssl.nexon.com/s2/game/ca/2019/banner/event_fashion_44D84F496247DA32.jpg&quot;) center top no-repeat rgb(115, 49, 204); display: none;">
+            
+            <!-- 이미지url, 배경컬러 관리자 입력 -->
+            <a href="http://ca.nexon.com/board/2097152023/1275/" target="_self">
+                <span class="desc" style="color:#fee163;">
+                    <!-- 폰트컬러 관리자 입력 -->
+                    <span class="category" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 10);">이벤트 </span>
+                    <span class="time" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 10);">2019.07.18 ~ 2022.12.31<span class="bg"></span></span>
+                    <span class="tit">
+                            <span class="l1"><span style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 60);">도전 패션왕 </span></span>
+                            <span class="l2"><span style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 60);"> 비엔비</span></span>
+                         
+                                                
+                    </span>
+                    <span class="txt" style="opacity: 0;">남들과는 다른 자신감!</span>
+                </span>
+                <span class="align"></span>
+            </a>
+        </li>
+    </ul>
+        
+            <span class="timer_bar" style="width: 0px;"></span>
+            <div class="btn_list">
+                <button type="button"> 이벤트 목록 전체보기</button>
+            </div>
+        
+    <div class="controls">
+        <span class="paging"><em>4</em> <span class="bar">/</span> <span class="total">8</span></span>
+        <span class="nav">
+            <button class="prev">이전</button>
+            <button class="next">다음</button>
+        </span>
+    </div>
+        
+            <div class="thumbs_wrap" style="display: none; opacity: 1;">
+                <span class="bg"></span>
+                <div class="thumbs" style="width: 1012.5px;">
+                    <ul style="transform: matrix(1, 0, 0, 1, -1012.5, 0);">
+
+                        <li class="" style="width: 253.125px;">
+                            <a href="https://ca.nexon.com/Event_20220428/Event2" target="_self">
+                                    세이브 디 어스 With 동물자유연대
+                            </a>
+                        </li>
+                        <li class="" style="width: 253.125px;">
+                            <a href="https://ca.nexon.com/Event_20220428/Event1" target="_self">
+                                    슈퍼 레이
+                            </a>
+                        </li>
+                        <li class="" style="width: 253.125px;">
+                            <a href="https://ca.nexon.com/Event_20220428/Event3" target="_self">
+                                    크린이 보물섬
+                            </a>
+                        </li>
+                        <li class="active" style="width: 253.125px;">
+                            <a href="https://playgeto.com/getopoint/promotion/coupon.html" target="_self">
+                                    플레이게토에 쿠폰 도착!
+                            </a>
+                        </li>
+                        <li class="" style="width: 253.125px;">
+                            <a href="https://ca.nexon.com/News/Event/Content/1399" target="_self">
+                                    드랍더템 시즌1
+                            </a>
+                        </li>
+                        <li class="" style="width: 253.125px;">
+                            <a href="https://ca.nexon.com/News/Event/Content/1411" target="_self">
+                                    2022 시즌2 크아짱 오픈!
+                            </a>
+                        </li>
+                        <li class="" style="width: 253.125px;">
+                            <a href="http://ca.nexon.com/board/2097152023/1274/" target="_self">
+                                    신규 유저   혜택 안내
+                            </a>
+                        </li>
+                        <li class="" style="width: 253.125px;">
+                            <a href="http://ca.nexon.com/board/2097152023/1275/" target="_self">
+                                    도전 패션왕   비엔비
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        
+</div><!-- //banner -->
+    
+        <!-- 배너 모아보기 -->
+        <div class="banner_all"></div>        
+        <!-- //배너 모아보기 -->
+    
+
+
+            </div><!-- //common-->
+            
+<!-- contents -->
+<div id="contents">
+    <!-- 인트로 배너 -->
+    <div class="intro_banner" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+            <a href="https://ca.nexon.com/Event_20220428/Event2" target="_self">
+                <img src="https://lwi.nexon.com/ca/banner/2022/0428/intro_Banner_event_savetheearth_4B5XHJO551TI3834.png" alt="">
+            </a>
+    </div>
+    <!-- 알림 -->
+    <div class="ca_notice">
+        <div class="inner">
+            <h2 class="blind">크아 공지</h2>
+                <div class="info">
+                    <span class="tit"><span>공지</span><a href="/notice/137578">5/19(목) 넥슨 정기점검 안내</a></span>
+                    <span class="time"><span class="icon">작성일</span>2022.05.17</span>
+                    <span class="view"><span class="icon">조회수</span>25,747</span>
+                </div>
+                <div class="list">
+                    <ul>
+                            <li>
+                                <span class="category">패치</span>
+                                <a href="/notice/137515">5/12(목) 크레이지아케이드 업데이트 안내 </a>
+                                <span class="info2">
+                                    <span class="time"><span class="icon">작성일</span>2022.05.10</span>
+                                    <span class="view"><span class="icon">조회수</span>3,979</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="category">공지</span>
+                                <a href="/notice/137509">5월 지속 가능한 보안캠페인 진행 안내</a>
+                                <span class="info2">
+                                    <span class="time"><span class="icon">작성일</span>2022.05.09</span>
+                                    <span class="view"><span class="icon">조회수</span>102,828</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="category">공지</span>
+                                <a href="/notice/137500">4월 불법프로그램 사용 게임아이디 단속 안내</a>
+                                <span class="info2">
+                                    <span class="time"><span class="icon">작성일</span>2022.05.06</span>
+                                    <span class="view"><span class="icon">조회수</span>1,104</span>
+                                </span>
+                            </li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+
+    <!-- 크아템 -->
+    <div class="ca_tem">
+        <div class="inner">
+            <h2>크아템</h2>
+            <h3 class="blind">글 정렬</h3>
+            <div class="sorting">
+                <span class="btn active" data-value="R"><button type="button" onclick="CAMain.ItemCllick('R')">좋아요</button></span>
+                <span class="btn" data-value="C"><button type="button" onclick="CAMain.ItemCllick('C')">댓글</button></span>
+                <span class="bar"></span>
+            </div>
+            <div class="tem_list mCustomScrollbar _mCS_1"><div id="mCSB_1" class="mCustomScrollBox mCS-dark-3 mCSB_horizontal mCSB_inside" style="max-height: none;" tabindex="0"><div id="mCSB_1_container" class="mCSB_container" style="position: relative; top: 0px; left: 0px; width: 4992px;" dir="ltr">
+                <ul id="item_listData" style="width: 4992px;">
+
+
+    <li>
+        <a href="/Info/Item?i=%ec%bd%94-%ed%81%ac+%eb%ac%bc%ed%92%8d%ec%84%a0">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/0912a0c4-028a-4668-b571-e10b11a0bf24.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 2,489</span>
+                <span class="cmt"><span class="icon">댓글수</span> 837</span>
+            </div>
+            <span class="name">코-크 물풍선</span>
+            <span class="category">캐릭터 
+                
+                <span class="icon arrow"></span> 물풍선
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=%ec%8a%88%ed%8d%bc+%ec%88%98">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/610aa8cf-9698-44c2-bae5-6d4a31e61232.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 1,269</span>
+                <span class="cmt"><span class="icon">댓글수</span> 615</span>
+            </div>
+            <span class="name">슈퍼 수</span>
+            <span class="category">캐릭터 
+                
+                <span class="icon arrow"></span> 캐릭터
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=%ec%8a%88%ed%8d%bc+%ec%88%98+%ec%8a%a4%ed%83%80">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/70ef5ace-f43b-4671-9cdf-725232c233d6.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 600</span>
+                <span class="cmt"><span class="icon">댓글수</span> 99</span>
+            </div>
+            <span class="name">슈퍼 수 스타</span>
+            <span class="category">캐릭터 
+                
+                <span class="icon arrow"></span> 특수효과
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=%eb%b6%89%ec%9d%80%eb%b9%9b+%eb%ac%bc%ed%92%8d%ec%84%a0">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/6176556d-0a7a-4c41-a557-43ba3b26b45f.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 513</span>
+                <span class="cmt"><span class="icon">댓글수</span> 192</span>
+            </div>
+            <span class="name">붉은빛 물풍선</span>
+            <span class="category">캐릭터 
+                
+                <span class="icon arrow"></span> 물풍선
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=%ec%95%85%eb%a7%88+%eb%ac%bc%ed%92%8d%ec%84%a0">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/34b9c282-e752-4738-9028-107410c0fb91.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 390</span>
+                <span class="cmt"><span class="icon">댓글수</span> 138</span>
+            </div>
+            <span class="name">악마 물풍선</span>
+            <span class="category">캐릭터 
+                
+                <span class="icon arrow"></span> 물풍선
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=%eb%b9%84%ec%88%91%ed%94%84%eb%a6%ac%ec%a0%9c">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/171a418e-cea9-4f31-a33b-e9e8b11fe28f.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 366</span>
+                <span class="cmt"><span class="icon">댓글수</span> 147</span>
+            </div>
+            <span class="name">비숑프리제</span>
+            <span class="category">펫 전용 
+                
+                <span class="icon arrow"></span> 펫
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=%eb%8f%8c%ec%9d%98+%ec%a0%95%eb%a0%b9+%eb%ac%bc%ed%92%8d%ec%84%a0">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/f2a58036-b5ca-4cbe-9583-f486bbf6f847.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 357</span>
+                <span class="cmt"><span class="icon">댓글수</span> 100</span>
+            </div>
+            <span class="name">돌의 정령 ...</span>
+            <span class="category">캐릭터 
+                
+                <span class="icon arrow"></span> 물풍선
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=%eb%a0%88%ec%96%b4+%eb%ac%bc%ed%92%8d%ec%84%a0">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/98ca4047-5213-40ab-aead-0c1a61bafa8d.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 233</span>
+                <span class="cmt"><span class="icon">댓글수</span> 115</span>
+            </div>
+            <span class="name">레어 물풍선</span>
+            <span class="category">캐릭터 
+                
+                <span class="icon arrow"></span> 물풍선
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=2018+%ed%8e%ab">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/8f13e562-f5d2-4fb2-a1b5-1f32f79b3fda.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 195</span>
+                <span class="cmt"><span class="icon">댓글수</span> 48</span>
+            </div>
+            <span class="name">2018 펫</span>
+            <span class="category">펫 전용 
+                
+                <span class="icon arrow"></span> 펫
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=%ec%8a%a4%ed%83%80%ed%8a%b8%eb%a6%ac">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/59711333-a75a-477d-8a6d-de48e6d2deda.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 175</span>
+                <span class="cmt"><span class="icon">댓글수</span> 46</span>
+            </div>
+            <span class="name">스타트리</span>
+            <span class="category">캐릭터 
+                
+                <span class="icon arrow"></span> 특수효과
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=%ea%b3%b0%eb%8f%8c%ec%9d%b4+%eb%ac%bc%ed%92%8d%ec%84%a0">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/7b30e454-581e-44a7-9c4a-c99a602de640.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 150</span>
+                <span class="cmt"><span class="icon">댓글수</span> 48</span>
+            </div>
+            <span class="name">곰돌이 물풍선</span>
+            <span class="category">캐릭터 
+                
+                <span class="icon arrow"></span> 물풍선
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=%ec%99%95%eb%b0%98%ec%a7%9d%ec%9d%b4+%ec%83%a4%ec%83%a4%ec%83%a5">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/73ccb331-8cc2-4fe4-9f27-fbdbc3f2820f.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 138</span>
+                <span class="cmt"><span class="icon">댓글수</span> 52</span>
+            </div>
+            <span class="name">왕반짝이 샤...</span>
+            <span class="category">캐릭터 
+                
+                <span class="icon arrow"></span> 샤샤샥
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=%ec%9b%b0%ec%b9%98%ec%8a%a4%eb%b9%b5%eb%b9%a0%eb%a0%88">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/26cc6abf-4a25-4215-ad7c-63aa3a490041.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 123</span>
+                <span class="cmt"><span class="icon">댓글수</span> 44</span>
+            </div>
+            <span class="name">웰치스빵빠레</span>
+            <span class="category">슬롯 
+                
+                <span class="icon arrow"></span> 빵빠레
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=%ec%83%9d%ec%b6%956%ea%b5%ac+%ec%97%b0%ea%b2%b0%eb%ac%bc%ed%92%8d%ec%84%a0">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/50c7ec3b-948d-4b61-b23c-9608d43081e7.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 98</span>
+                <span class="cmt"><span class="icon">댓글수</span> 42</span>
+            </div>
+            <span class="name">생축6구 연결...</span>
+            <span class="category">캐릭터 
+                
+                <span class="icon arrow"></span> 물풍선
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=2nd%ed%81%ac%ec%95%84%ec%99%951%eb%93%b1%ed%8e%ab">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/afd7ad4f-6e9a-462b-b413-025ab18f4596.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 97</span>
+                <span class="cmt"><span class="icon">댓글수</span> 25</span>
+            </div>
+            <span class="name">2nd크아왕1등펫</span>
+            <span class="category">펫 전용 
+                
+                <span class="icon arrow"></span> 펫
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=%eb%a7%88%eb%a6%ac%eb%93%9c+%eb%ac%bc%ed%92%8d%ec%84%a0">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/71ac5d1a-426b-4146-b447-8aed884f9252.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 89</span>
+                <span class="cmt"><span class="icon">댓글수</span> 21</span>
+            </div>
+            <span class="name">마리드 물풍선</span>
+            <span class="category">캐릭터 
+                
+                <span class="icon arrow"></span> 물풍선
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=%ed%95%9c%ea%b5%ad%ec%9d%91%ec%9b%90%eb%b0%b0%ea%b2%bd">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/b0583bff-836e-41ff-acbd-21bb49a67d01.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 76</span>
+                <span class="cmt"><span class="icon">댓글수</span> 22</span>
+            </div>
+            <span class="name">한국응원배경</span>
+            <span class="category">슬롯 
+                
+                <span class="icon arrow"></span> 배경
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=%eb%a3%a8%ec%8b%9c%eb%93%9c+%eb%ac%bc%ed%92%8d%ec%84%a0">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/5af651d6-1643-47c6-ba7e-e6b8fb7aa985.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 62</span>
+                <span class="cmt"><span class="icon">댓글수</span> 22</span>
+            </div>
+            <span class="name">루시드 물풍선</span>
+            <span class="category">캐릭터 
+                
+                <span class="icon arrow"></span> 물풍선
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=%eb%8b%a4%ed%81%ac%eb%8b%88">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/a341c474-448b-441f-b56f-3e79bf624b5f.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 60</span>
+                <span class="cmt"><span class="icon">댓글수</span> 25</span>
+            </div>
+            <span class="name">다크니</span>
+            <span class="category">펫 전용 
+                
+                <span class="icon arrow"></span> 펫
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=%ec%8a%88%ed%8d%bc+%ec%9a%b0%eb%8b%88">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/c0d960f1-0896-49d1-84ca-2a2049cbcc2c.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 58</span>
+                <span class="cmt"><span class="icon">댓글수</span> 24</span>
+            </div>
+            <span class="name">슈퍼 우니</span>
+            <span class="category">캐릭터 
+                
+                <span class="icon arrow"></span> 캐릭터
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=%eb%b9%84%ec%b9%98%eb%b3%bc+%eb%ac%bc%ed%92%8d%ec%84%a0">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/03218402-c5a2-4478-81dd-d60023e489e5.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 54</span>
+                <span class="cmt"><span class="icon">댓글수</span> 22</span>
+            </div>
+            <span class="name">비치볼 물풍선</span>
+            <span class="category">캐릭터 
+                
+                <span class="icon arrow"></span> 물풍선
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=%ea%b3%a8%eb%93%9c%eb%a9%a4%eb%b2%84%ec%8a%a4">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/d68da41f-5ffa-4352-9d63-802998adbf8f.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 44</span>
+                <span class="cmt"><span class="icon">댓글수</span> 20</span>
+            </div>
+            <span class="name">골드멤버스</span>
+            <span class="category">슬롯 
+                
+                <span class="icon arrow"></span> 아이디 치장
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=%eb%83%90%ec%98%b9%ec%9d%b4+%eb%af%b8%ec%98%a4">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/35c2892a-38d5-430e-8641-a704fe71f751.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 42</span>
+                <span class="cmt"><span class="icon">댓글수</span> 8</span>
+            </div>
+            <span class="name">냐옹이 미오</span>
+            <span class="category">슬롯 
+                
+                <span class="icon arrow"></span> 깃발
+                
+                        </span>
+        </a>
+    </li>
+    <li>
+        <a href="/Info/Item?i=%eb%b8%94%eb%a3%a8+%eb%b0%b0%ea%b2%bd">
+            <div class="circle">
+                <span class="tmb"><img src="https://ssl.nexon.com/s2/game/ca/ca2019/info/item/cb20ef71-25b3-472f-ac2c-ecb934267eba.png" alt="" class="mCS_img_loaded"><span class="shadow"></span></span>
+                <span class="like"><span class="icon">좋아요</span> 40</span>
+                <span class="cmt"><span class="icon">댓글수</span> 12</span>
+            </div>
+            <span class="name">블루 배경</span>
+            <span class="category">슬롯 
+                
+                <span class="icon arrow"></span> 배경
+                
+                        </span>
+        </a>
+    </li>
+
+                </ul>
+            </div><div id="mCSB_1_scrollbar_horizontal" class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark-3 mCSB_scrollTools_horizontal" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_horizontal" class="mCSB_dragger" style="position: absolute; min-width: 30px; display: block; width: 193px; max-width: 935px; left: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+            <div class="nav">
+                <button type="button" class="icon btn_prev">이전 아이템</button>
+                <button type="button" class="icon btn_next">다음 아이템</button>
+            </div>
+            <a href="javascript:void(0);" onclick="location.href='/Info/Item?o='+$('.ca_tem .sorting .active').attr('data-value')" class="icon btn_more">크아템 더 보기</a>
+        </div>
+    </div>
+
+
+
+<div class="ca_movie">
+    <div class="inner">
+        <h2>크튜브</h2>
+        <div class="swiper mySwiper swiper-container-initialized swiper-container-horizontal" data-lastpage="1" data-page="1">
+            <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+                    <div class="swiper-slide swiper-slide-active" data-id="11">
+                        <a href="https://youtu.be/FDKSCdJ17R8" target="_blank">
+                                <span class="icon hot">hot</span>
+                            <span class="thumb"><img src="https://i1.ytimg.com/vi/FDKSCdJ17R8/mqdefault.jpg" alt="영상 썸네일"><span class="bg_dim"></span></span>
+                            <span class="icon play"></span>
+                            <span class="title" title="20주년 기념 - 애니메이션">20주년 기념 - 애니메이션</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide swiper-slide-next" data-id="10">
+                        <a href="https://youtu.be/8x-KJmwj1yw" target="_blank">
+                                <span class="icon new">new</span>
+                            <span class="thumb"><img src="https://i1.ytimg.com/vi/8x-KJmwj1yw/mqdefault.jpg" alt="영상 썸네일"><span class="bg_dim"></span></span>
+                            <span class="icon play"></span>
+                            <span class="title" title="20주년 기념송 - 오늘 나를 부탁해">20주년 기념송 - 오늘 나를 부탁해</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide" data-id="9">
+                        <a href="https://youtu.be/LgZPagRW06w" target="_blank">
+                                <span class="icon new">new</span>
+                            <span class="thumb"><img src="https://i1.ytimg.com/vi/LgZPagRW06w/mqdefault.jpg" alt="영상 썸네일"><span class="bg_dim"></span></span>
+                            <span class="icon play"></span>
+                            <span class="title" title="20주년 기념송 - 함께한 여행">20주년 기념송 - 함께한 여행</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide" data-id="5">
+                        <a href="https://youtu.be/mnlQ-oytY2k" target="_blank">
+                                <span class="icon new">new</span>
+                            <span class="thumb"><img src="https://i1.ytimg.com/vi/mnlQ-oytY2k/mqdefault.jpg" alt="영상 썸네일"><span class="bg_dim"></span></span>
+                            <span class="icon play"></span>
+                            <span class="title" title="20주년 기념 미니앨범">20주년 기념 미니앨범</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide" data-id="4">
+                        <a href="https://youtu.be/V4bXi3nc_rA" target="_blank">
+                                <span class="icon new">new</span>
+                            <span class="thumb"><img src="https://i1.ytimg.com/vi/V4bXi3nc_rA/mqdefault.jpg" alt="영상 썸네일"><span class="bg_dim"></span></span>
+                            <span class="icon play"></span>
+                            <span class="title" title="개발실 인터뷰 &amp; 축전 영상">개발실 인터뷰 &amp; 축전 영상</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide" data-id="2">
+                        <a href="https://youtu.be/dbvbx7LqEj8" target="_blank">
+                                <span class="icon new">new</span>
+                            <span class="thumb"><img src="https://i1.ytimg.com/vi/dbvbx7LqEj8/mqdefault.jpg" alt="영상 썸네일"><span class="bg_dim"></span></span>
+                            <span class="icon play"></span>
+                            <span class="title" title="처음 만난 남자 앞에서 캐리 해버림">처음 만난 남자 앞에서 캐리 해버림</span>
+                        </a>
+                    </div>
+            </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        <div class="slide_button">
+            <button class="slide_prev swiper-button-disabled" type="button" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true">이전으로</button>
+            <button class="slide_next" type="button" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false">다음으로</button>
+        </div>
+        <div class="swiper-scrollbar"><div class="swiper-scrollbar-drag" style="transform: translate3d(0px, 0px, 0px); width: 834.196px;"></div></div>
+    </div>
+</div>
+
+
+    <!-- 월간 크아 -->
+    <div class="ca_monthly">
+        <h2>월간 크아</h2>
+            <span class="bg"><img src="https://lwi.nexon.com/ca/banner/2022/0513/01_Monthly_Main88_bg_A0DDC7D33B502639.png" alt=""></span>
+            <span class="cover"><a href="https://ca.nexon.com/Monthly/Content/196"><img src="https://lwi.nexon.com/ca/banner/2022/0513/01_Monthly_Main87_D0BBC6D33B502659.png" alt="월간 크아 커버 이미지"></a></span>
+            <ul class="chapter">
+                    <li>
+                        <a href="https://ca.nexon.com/Monthly/Content/196#target2">
+                            <em>Chapter 1</em>
+                            <span>크아퀴즈 <span class="icon">바로가기</span></span>
+                        </a>
+                    </li>
+                                    <li>
+                        <a href="https://ca.nexon.com/Monthly/Content/196#target3">
+                            <em>Chapter 2</em>
+                            <span>이달의 패션왕 <span class="icon">바로가기</span></span>
+                        </a>
+                    </li>
+            </ul>
+        <a href="/News/Monthly/List" class="icon btn_more">월간 크아 더 보기</a>
+    </div>
+
+    <!-- 크아톡 -->
+    <div class="ca_talk">
+        <h2>크아톡<span class="line" style="width: 73.1333px;"></span></h2>
+        <h3 class="blind">글 정렬</h3>
+        <div class="sorting">
+            <span class="btn active" onclick="$('.ca_talk .talk_data').load('/Home/MainCATalk', { stype: 'all'});"><button type="button" data-value="all">전체</button></span>
+            <span class="btn" onclick="$('.ca_talk .talk_data').load('/Home/MainCATalk', { stype: 'free'});"><button type="button" data-value="free">게시판</button></span>
+                <span class="btn" onclick="$('.ca_talk .talk_data').load('/Home/MainCATalk', { stype: 'cain'});"><button type="button" data-value="cain">카페</button></span>
+                            <span class="btn" onclick="$('.ca_talk .talk_data').load('/Home/MainCATalk', { stype: 'twitter'});"><button type="button">트위터</button></span>
+                            <span class="btn" onclick="$('.ca_talk .talk_data').load('/Home/MainCATalk', { stype: 'play'});"><button type="button">플레이톡</button></span>
+                            <span class="btn" onclick="$('.ca_talk .talk_data').load('/Home/MainCATalk', { stype: 'insta'});"><button type="button">인스타그램</button></span>
+            <span class="bar" style="width: 60px; transform: matrix(1, 0, 0, 1, -1.00002, 0);"></span>
+        </div>
+        <div class="talk_list">
+            <div class="talk_data">
+
+    <ul>        
+            <li data-type="free">
+                <a href="javascript:void(0);" onclick="CACommon.GoMyBlock('파대스', '0');" class="writer">파대스</a>                
+                <a href="/board/2097152052/495050" target="_blank" class="info">
+                    <span class="category free">게시판</span>
+                                        <span class="time"><span class="icon">작성시간</span>29분전</span>
+                    <span class="desc">아.....8주년모자180만원에 팔아줄사람 없나?.....</span>
+                    <span class="like"><span class="icon">좋아요수</span>0</span><span class="cmt"><span class="icon">댓글수</span>0</span>
+                </a>
+            </li>
+            <li data-type="twitter">
+                <a href="https://twitter.com/xxyyri" target="_blank" class="writer">🎨</a>                
+                <a href="https://twitter.com/xxyyri/status/1526581243579490304" target="_blank" class="info">
+                        <span class="tmb"><img src="https://pbs.twimg.com/profile_images/1526442483026399232/KpX-HVBk_bigger.jpg" onerror="this.src='https://ssl.nexon.com/s2/game/ca/ca2019/main/ico_twitter.png'" alt="프로필 사진"><span class="icon flag"></span></span>
+                                        <span class="time"><span class="icon">작성시간</span>1시간전</span>
+                    <span class="desc">크레이지 아케이드 절망편 https://t.co/PU1x9REXli</span>
+                    <span class="bookmark"><span class="icon">관심수</span>2</span><span class="retweet"><span class="icon">리트윗수</span>1</span>
+                </a>
+            </li>
+            <li data-type="free">
+                <a href="javascript:void(0);" onclick="CACommon.GoMyBlock('테르슈테겐', '0');" class="writer">테르슈테겐</a>                
+                <a href="/board/2097152052/495049" target="_blank" class="info">
+                    <span class="category free">게시판</span>
+                                        <span class="time"><span class="icon">작성시간</span>2022.05.17</span>
+                    <span class="desc">한달에 200만원 구할수있어서 좋구나</span>
+                    <span class="like"><span class="icon">좋아요수</span>0</span><span class="cmt"><span class="icon">댓글수</span>0</span>
+                </a>
+            </li>
+            <li data-type="play">
+                오리온09                
+                <a href="https://playtalk.nexon.com/30" target="_blank" class="info">
+                    <span class="category play">게시판</span>
+                                        <span class="time"><span class="icon">작성시간</span>2022.05.17</span>
+                    <span class="desc">신한 쏠 쓰는애들 이벤트로 스벅 쿠폰 10만장 뿌린다 선착순이니 알아서들 하소
+
+https://sol.shinhan.com/sms.jsp?scrid=IN03010200002&amp;EVN</span>
+                    
+                </a>
+            </li>
+            <li data-type="twitter">
+                <a href="https://twitter.com/Daniel_gene" target="_blank" class="writer">앞으로 더 나아질 람쥐🐿🕯🎗</a>                
+                <a href="https://twitter.com/Daniel_gene/status/1526360219340550144" target="_blank" class="info">
+                        <span class="tmb"><img src="https://pbs.twimg.com/profile_images/1504223506552156164/qfOZhHIc_bigger.jpg" onerror="this.src='https://ssl.nexon.com/s2/game/ca/ca2019/main/ico_twitter.png'" alt="프로필 사진"><span class="icon flag"></span></span>
+                                        <span class="time"><span class="icon">작성시간</span>2022.05.17</span>
+                    <span class="desc">배찌는 크레이지 아케이드 캐릭터고요. https://t.co/IEMe8Zz2S9 https://t.co/6JINtNxzDb</span>
+                    <span class="bookmark"><span class="icon">관심수</span>0</span><span class="retweet"><span class="icon">리트윗수</span>0</span>
+                </a>
+            </li>
+    </ul>
+
+            </div>
+            <div class="quick">
+                <a href="https://cafe.naver.com/caincafe" target="_blank" class="btn1">카페</a>
+                <a href="https://playtalk.nexon.com/30" target="_blank" class="btn3">플레이톡</a>
+                <a href="https://www.instagram.com/crazyarcadekorea/" target="_blank" class="btn4">인스타그램</a>
+                <a href="https://www.facebook.com/crazyarcadekr/" target="_blank" class="btn2">페이스북</a>
+            </div>
+        </div>
+        <a href="/Free/List" class="icon btn_more">크아톡 더 보기</a>
+    </div>
+
+    <!-- 랭킹 -->
+    <div class="ca_ranking">
+        <div class="inner">
+            <h2 class="blind">랭킹</h2>
+            <div class="sorting">
+                <div class="btn_wrap">
+                    <div class="btns"><span class="btn" data-idx="4" data-url="/Ranking/Winning"><button type="button">연승무한랭킹</button></span>
+                        <span class="btn active" data-idx="1" data-url="/Ranking/CAJJang"><button type="button">크아짱랭킹</button></span>
+                        <span class="btn" data-idx="2" data-url="/Ranking/Total"><button type="button">종합랭킹</button></span>
+                        <span class="btn" data-idx="3" data-url="/Ranking/Ladder"><button type="button">래더랭킹</button></span>
+                        
+                    </div>
+                </div>
+                <button type="button" class="icon btn_prev">이전 랭킹</button>
+                <button type="button" class="icon btn_next">다음 랭킹</button>
+            </div>
+            <div class="server">
+                <span class="btn active" data-value="0"><button type="button">해피</button></span>
+                <span class="btn" data-value="1"><button type="button">드림</button></span>
+                <span class="bar"></span>
+            </div>
+            <div class="rank_list">
+
+<ol>
+    <li>
+        <span class="icon rank1">1위</span>
+        <span class="name"><img src="https://ssl.nexon.com/s2/game/ca/2017/cazzang/grade/G_9_5.png" alt="등급아이콘"><a href="javascript:void(0);" onclick="CACommon.GoMyBlock('천상아래나라', '0');">천상아래나라</a></span>
+        <span class="exp"><span>짱포인트</span> 4,401</span>
+        <span class="win"><span>승리</span> 37</span>
+    </li>
+    <li>
+        <span class="icon rank2">2위</span>
+        <span class="name"><img src="https://ssl.nexon.com/s2/game/ca/2017/cazzang/grade/G_9_3.png" alt="등급아이콘"><a href="javascript:void(0);" onclick="CACommon.GoMyBlock('난장쇼', '0');">난장쇼</a></span>
+        <span class="exp"><span>짱포인트</span> 4,134</span>
+        <span class="win"><span>승리</span> 17</span>
+    </li>
+    <li>
+        <span class="icon rank3">3위</span>
+        <span class="name"><img src="https://ssl.nexon.com/s2/game/ca/2017/cazzang/grade/G_9_4.png" alt="등급아이콘"><a href="javascript:void(0);" onclick="CACommon.GoMyBlock('XinChao2021', '0');">XinChao2021</a></span>
+        <span class="exp"><span>짱포인트</span> 4,102</span>
+        <span class="win"><span>승리</span> 22</span>
+    </li>
+</ol>
+
+            </div>
+            <a href="javascript:void(0);" onclick="location.href=$('.ca_ranking .sorting .btns .active').attr('data-url')" class="icon btn_more">랭킹 더 보기</a>
+        </div>
+        <span class="bg"></span>
+    </div>
+
+
+</div>
+  
+
+            <a href="#wrapper" class="icon btn_top" style="margin-right: 0px;">맨 위로 가기</a>
+        </div>
+        <div id="footer">
+            <ul class="footer_quick">
+                <li class="q1"><a href="/Info/Account">계정 정보 안내</a></li>
+                <li class="q2"><a href="/board/2097152023/1274">신규 유저 혜택 안내</a></li>
+                <li class="q3"><a href="/board/2097152023/1273">PC방 혜택 안내</a></li>
+                <li class="q4"><a href="/Support">온라인 문의</a></li>
+            </ul>
+            <span class="line"></span>
+            <ul class="related">
+                <li class="r1"><a href="https://cafe.naver.com/caincafe" target="_blank">네이버</a></li>
+                <li class="r2"><a href="https://www.facebook.com/crazyarcadekr/" target="_blank">페이스북</a></li>
+                <li class="r3"><a href="https://playtalk.nexon.com/30" target="_blank">플레이톡</a></li>
+                <li class="r4"><a href="https://www.youtube.com/channel/UC_VtxexDpPin8CqkxzVeMaQ" target="_blank">유튜브</a></li>
+                <li class="r5"><a href="https://www.instagram.com/crazyarcadekorea/" target="_blank">인스타그램</a></li>
+            </ul>
+            <ul class="footer_nav">
+                <li><a href="http://company.nexon.com/" target="_blank">회사소개</a></li>
+                <li><a href="http://career.nexon.com/" target="_blank">채용안내</a></li>
+                <li><a href="javascript:void(0);" onclick="NgbMember.GoInfo_Stipulation( '_blank' ); return false;">이용약관</a></li>
+                <li><a href="javascript:void(0);" onclick="CACommon.windowPopup('/Popup/UserAgeLimit', 500, 440, 0, 'popupAgeLimit'); return false;">게임이용등급안내</a></li>
+                <li><a href="javascript:void(0);" onclick="NgbMember.GoInfo_UserInfo( '_blank' ); return false;"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="javascript:void(0);" onclick="NgbMember.GoInfo_ChildProtect( '_blank' ); return false;">청소년보호정책</a></li>
+                <li><a href="javascript:void(0);" onclick="CACommon.windowPopup('/Popup/OperationPolicy', 610, 540, 0, 'popupOperationPolicy'); return false;">운영정책</a></li>
+                <li><a href="http://pcbang.nexon.com/" target="_blank">넥슨PC방</a></li>
+            </ul>
+            <address>
+                <span>(주)넥슨코리아 대표이사 이정헌</span><span>경기도 성남시 분당구 판교로 256번길 7</span><span>전화 : 1588-7701</span><span>팩스 : 0502-258-8322</span><br>E-mail : <a href="mailto:contact-us@nexon.co.kr">contact-us@nexon.co.kr</a><span> 사업자등록번호 : 220-87-17483호</span><span>통신판매업 신고번호 : 제2013-경기성남-1659호</span><a href="javascript:void(window.open('http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=2208717483','bizInfo','width=750, height=729, scrollbars=yes'));" class="link_license">사업자정보확인</a>
+            </address>
+            <p class="copyright">© NEXON Korea Corporation All Rights Reserved.</p>
+            <a href="http://www.nexon.com" class="footer_logo" target="_blank">NEXON</a>
+        </div>
+       
+    </div>
+    
+    <!-- //로그인 레이어7 : PC방 혜택 -->  
+
+
+    
+   
+    <!-- 로그인 레이어7 : PC방 혜택  simpleLayerOpen('layerPCbang') -->
+    <div class="layer_login" id="layerPCbang" style="display:none">
+        <span class="dim"></span>
+        <div class="modal_wrap">
+            <div class="modal_contents">
+                <h2><em><span>PC</span>방</em>유저 혜택 안내</h2>
+                <p class="txt1">다양하고 강력한 PC방 혜택을 누리고,  <br>지금 크레이지 아케이드 게임을 <br>더욱 풍성하게 즐기세요!</p>
+                <a href="/board/2097152023/1273" class="btn1">PC방 혜택 확인</a>
+                <div class="today_close">
+                    <button type="button" class="btn_today" onclick="CACommon.setCookieDays('PopupPcBang', 'true', 1); simpleLayerClose('layerPCbang');"><span class="icon"></span>오늘 하루 보지 않기</button>
+                </div>
+            </div>
+            <button type="button" class="icon btn_close" onclick="simpleLayerClose('layerPCbang')">레이어 닫기</button>
+        </div>
+    </div>    
+    
+    <div class="layer_login" id="layerLogin6" style="display:none">
+        <span class="dim"></span>
+        <div class="modal_wrap">
+            <div class="modal_header">
+                <h2><em></em></h2>
+                <h3>게임ID 생성 및 계정 통합 <br>불가 계정</h3>
+            </div>
+            <div class="modal_contents">
+                <ul class="info">
+                    <li>운영정책 위반으로 게임아이디를 생성할 수 없게 제한된 ID입니다.</li>
+                </ul>
+                <div class="primary">
+                    <dl class="desc">
+                        <dt>사유</dt>
+                        <dd class="reason">-</dd>
+                        <dt>기간</dt>
+                        <dd class="period">-</dd>
+                    </dl>
+                    <button type="button" class="btn1 btn_confirm" onclick="simpleLayerClose('layerLogin6')">확인</button>
+                </div>
+            </div>
+            <button type="button" class="icon btn_close" onclick="simpleLayerClose('layerLogin6')">레이어 닫기</button>
+        </div>
+    </div>
+
+   
+
+    
+
+<iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="https://vars.hotjar.com/box-21ccaa45726c0f3c8c458f7a87eb2298.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><script type="text/javascript" src="https://ssl.nexon.com/s1/global/ngb_bodyend.js" charset="euc-kr"></script><div><form id="formLogin" name="formLogin" method="post"></form></div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+header, main {
+    width: 1200px;
+}
+
+.big_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_size {
+    width: 200px;
+    height: 50px;
+}
+
+.menu_size {
+    width: 25px;
+    height: 25px;
+}
+
+ul {
+    background-color: #282828;
+    color: white;
+    list-style: none;
+    font-weight: bold;
+}
+
+.container {
+    float: left;
+    list-style: none;
+    margin-left: 40px;
+    margin-right: 70px;
+    line-height: 40px;
+}
+
+.container input {
+    display: flex;
+    justify-content:right;
+    align-self: center;
+}
+
+nav>ul::after {
+    content: "";
+    display: block;
+    clear: left;
+}
+
+.container ul {
+    display: none;
+    background-color:darkgray;
+    position: absolute;
+    padding: 0 10px;
+    margin-left: -10px;
+    font-size: 0.8em;
+}
+
+.container:hover ul {
+    display: block;
+}
+
+.steak_image1 {
+    background: url(image/steak.jpg) no-repeat 0/cover;
+    width: 1200px;
+    height: 700px;
+
+    text-indent: -9999em;
+}

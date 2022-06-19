@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<pre>
+   1   2   3   4
+   5   6   7   8
+   9   10   11   12
+   13   14   15   16
+   
+   1   2   3   4
+   5   6   6   8
+   9   10   11   8   
+   13   10   15   16
+   
+   로 만들어라
+   
+   결론 : 4행 4열... 즉 tr이 4개, 그리고 tr들에 각각 td를 4개씩 넣어야함.
+   그리고 6에다가 colspan="2" 하고 7을 주석처리
+   그리고 8에다가 rowspan="2" 하고 12를 주석처리
+   그리고 10에다가 rowspan="2" 하고 14를 주석처리
+</pre>
+<body>
+   <h1>행렬이 다른 테이블 만들기</h1>
+   <table border="1">
+      <tr>
+         <td>1</td>
+         <td>2</td>
+         <td>3</td>
+         <td>4</td>
+      </tr>
+      <tr>
+         <td>5</td>
+         <td colspan="2">6</td>
+         <!-- <td>7</td> -->
+         <td rowspan="2">8</td>
+      </tr>
+      <tr>
+         <td>9</td>
+         <td rowspan="2">10</td>
+         <td>11</td>
+         <!-- <td>12</td> -->
+      </tr>
+      <tr>
+         <td>13</td>
+         <!-- <td>14</td> -->
+         <td>15</td>
+         <td>16</td>
+      </tr>
+   </table>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인라인 스타일 시트</title>
+</head>
+
+<body style="color:rgb(56, 156, 123); text-align: center; font-size: 16px">
+    <p>Inline Style Sheet</p>
+    
+    <hr>
+
+    <ol style="color: rgb(255, 0, 157); text-align: left;">
+        <li>목록</li>
+        <li>목록</li>
+        <li>목록</li>
+        <li>목록</li>
+    </ol>
+
+    <hr>
+
+    <!-- div 요소의 컨텐츠는 부모 요소(body)의 font-size 16px에 대한 2배 비율이 되는 32px 적용 -->
+
+    <div style="font-size: 200%;">div 폰트사이즈
+        <!-- p 요소의 컨텐츠는 부모(div)의 다시 0.5배에 해당하는 비율이 적용되므로 16px 적용 -->
+        <p style="font-size: 50%;">문단 폰트사이즈</p>
+    </div>
+</body>
+</html>

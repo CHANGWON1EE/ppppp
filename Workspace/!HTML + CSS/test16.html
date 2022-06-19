@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .btn_img_size {
+            width: 30px;
+            height: 30px;
+        }
+        
+        button {
+            border: none;
+            background: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="server.html" name="studentInfo" method="post">
+        <div>
+            <label for="named">이름: </label>
+            <input type="text" id="named" name="named" minlength="3" maxlength="5" required>
+        </div>
+
+        <div>
+            <label for="stNum">학번: </label>
+            <input type="text" id="stNum" name="stNum" placeholder="2자리만 입력 가능" minlength="2" maxlength="2" required>
+        </div>
+
+        <input type="image" class="btn_img_size" src="button_icon.png" alt="전송 버튼">
+    </form>
+    <hr>
+
+    <form action="server.html" name="parents">
+        <div>
+            <label>아빠: 
+                <input type="text" name="father" placeholder="아빠이름" minlength="3" maxlength="5" required>
+            </label>
+        </div>
+
+        <div>
+            <label>엄마: 
+                <input type="text" name="mother" placeholder="엄마이름" minlength="3" maxlength="5" required>
+            </label>
+        </div>
+
+        <button>
+            <img class="btn_img_size" src="button_icon.png" alt="전송 버튼">
+        </button>
+
+        <button type="reset">
+            <img class="btn_img_size" src="icon.png" alt="초기화">
+        </button>
+    </form>
+    <hr>
+
+    <form action="server.html" name="login">
+        <div>
+            <label>ID:
+                <input type="text" placeholder="아이디를 입력해주세요." required>
+            </label>
+        </div>
+
+        <div>
+            <label>PW:
+                <input type="text" placeholder="패스워드를 입력해주세요." required>
+            </label>
+        </div>
+
+        <input type="image" class="btn_img_size" src="login_icon.png" alt="로그인">
+        <input type="image" class="btn_img_size" src="account_icon.png" alt="회원가입">
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+.background {
+    background: url(image/bg2.jpg) no-repeat 0/300px 450px;
+    width: 300px;
+    height: 450px;
+    text-align: center;
+    line-height: 450px;
+    font-size: 100px;
+    color: darkorange;
+    display: inline-block;
+    opacity: 0.3;
+}
+
+.container {
+    position: absolute;
+}
+
+.absolute {
+    font-size: 100px;
+    color: darkorange;
+    position: absolute;
+    left: calc((100% - 100px) / 2);
+    top: calc((100% - 132.5px) / 2);
+}
+
+.container {
+    display: inline-block;
+    margin-left: 10px;
+}
+

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과일 재고관리</title>
+    <!-- id 사용 불가(전체)-->
+    <!-- tbody 선택자 사용 불가 -->
+    <!-- 트리구조 가상 클래스 선택자 사용 불가 -->
+    <style>
+        table {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        th {
+            color:royalblue;
+            background-color: lightcyan;
+        }
+
+        thead, tfoot{
+            height: 60px;
+        }
+        
+        tbody tr {
+            height: 50px;
+        }
+
+        tbody td {
+            color: magenta;
+            background-color: antiquewhite;
+            font-size: 22px;
+        }
+        
+        tfoot td {
+            color: red;
+            background-color: aquamarine;
+            text-decoration: underline;
+            font-size: 25px;
+        }
+
+        td:not(tfoot td):hover {
+            background-color: silver;
+            font-size: 30px;
+        }
+
+        /* td:hover:not(tfoot td) {
+            background-color: silver;
+            font-size: 30px;
+        } */
+
+        td, th {
+            border: 1px solid green;
+        }
+
+        col:nth-of-type(1) {
+            width: 50px;
+        }
+
+        col:nth-of-type(2) {
+            width: 100px;
+        }
+
+        col:nth-of-type(n+3) {
+            width: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <figure>
+        <figcaption>과일 재고관리</figcaption>
+        <!-- <table border="1"> -->
+        <table>
+            <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <th scope="col" colspan="2">구분</th>
+                    <th scope="col">단가</th>
+                    <th scope="col">수량</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th scope="row" rowspan="4">품목</th>
+                    <th scope="row">사과</th>
+                    <td rowspan="2">5000 원</td>
+                    <td>30 개</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">배</th>
+                    <td>10 개</td>
+                </tr>            
+
+                <tr>
+                    <th scope="row">참외</th>
+                    <td>3500 원</td>
+                    <td>60 개</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">수박</th>
+                    <td>9000 원</td>
+                    <td>20 개</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="3">과일 재고수량</th>
+                    <td>120 개</td>
+                </tr>
+            </tfoot>
+        </table>
+    </figure>
+</body>
+</html>

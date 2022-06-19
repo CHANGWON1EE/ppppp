@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+/*
+	동위 선택자(sibling selector) : 기준이 되는 선택자와 같은 위치에 있는 태그를 선택
+	
+	동위 선택자의 종류 : '+', '~'
+	
+	동위선택자(+) : 선택자의 다음객체를 선택한다
+	동위선택자(~) : 선택자의 다음에 있는 모든 객체
+	
+	=====
+	
+	UI 요소 상태 선택자 (UI element states pseudo-classes)
+	ㄴ이하 '상태선택자'로 통일
+	
+	상태선택자 : 입력 양식의 상태를 선택할 때 사용하는 선택자
+	
+	상태선택자의 종류
+	1. checked -> (input:checked 등으로 사용)
+	2. focus   -> (input:focus 등으로 사용)
+	3. enabled -> (input:enabled 등으로 사용)
+	4. disabled-> (input:disabled 등으로 사용)
+	
+	상태선택자의 의미
+	1. checked : 체크 상태의 input 태그를 선택
+	2. focus   : 포커스가 있는 input 태그를 선택
+	3. enabled : 사용 가능한 input 태그를 선택
+	4. disabled: 사용 불가능한 input 태그를 선택
+	  
+*/
+
+	h1+h2{
+		background: pink;
+	}
+	h1~h2{
+		color: blue;
+	}
+	input:focus{
+		color: orange;
+		font-size: 1.5em; /* em은 배수를 뜻한다. 즉 1.5배라는 의미이다. */
+	}
+	input:disabled {
+		border: 2px solid red;
+	}
+	input:checked {
+		width: 50px;
+		height: 50px;
+	}
+</style>
+</head>
+<body>
+	<form>	<!-- 폼태그 시작 -->
+		홍 <input type="text" id="id1" value="hong" readonly>
+		길동 <input type="text" id="id2" value="gildong">
+		
+		관심 : <input type="checkbox" name="interest">
+		축구 <input type="checkbox" name="interest">
+		야구 <input type="checkbox" name="interest">
+		농구 <input type="checkbox" name="interest">
+		<br/>
+		취미 : <input type="radio" name="hobby">
+		영화감상 <input type="radio" name="hobby">
+		독서 <input type="radio" name="hobby">
+		운동 <input type="radio" name="hobby">
+	</form> <!-- 폼태그 끝 -->
+	
+	<h1>11111 동위선택자 테스트 11111</h1>
+	<h2>22222 동위선택자 테스트 22222</h2>
+	<h3>33333 동위선택자 테스트 33333</h3>
+</body>
+</html>

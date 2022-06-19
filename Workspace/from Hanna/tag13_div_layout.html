@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<!-- 
+
+의사 클래스 pseudo-class : 이해를 쉽게 하기 위해선 '가상클래스' 라고 이해하는것이 더 편함
+
+이번 주석의 아래 내용에는 의사클래스를 줄여 pc라고 부르겠음
+선택자는 selector에서 줄여 sel이라고 부르겠음
+아이디는 idName, 클래스는 className이라 부르겠음.
+속성은 프로퍼티라고 부르겠음.
+속성값은 밸류라고 부르겠음.
+
+의사클래스 (가상클래스)의 문법
+
+예시1번)
+sel: pc{
+   프로퍼티: 밸류
+}
+
+예시2번)
+sel.idName: pc{
+   프로퍼티: 밸류
+}
+
+예시3번)
+sel.className: pc{
+   프로퍼티: 밸류
+}
+
+-----
+
+의사클래스의 종류는 4개가 있다.
+
+1. 동적 의사 클래스(dynamic pseudo-classes)
+2. 상태 의사 클래스(UI element states pseudo-classes)
+3. 구조 의사 클래스(structural pseudo-classes)
+4. 기타 의사 클래스
+
+-----
+
+각각의 내용에 대해 살펴보자
+
+1. 동적 의사 클래스(dynamic pseudo-classes)
+  :link      : 디폴트값으로서 한 번도 해당 링크를 통해서 링크된 URL 웹페이지를 방문하지 않은 '상태'를 모두 선택함
+  :visited   : 사용자가 한 번이라도 해당 링크를 통해서 연결된 페이지를 방문한 '상태'를 모두 선택함.
+  :hover   : 사용자의 마우스 커서가 링크 위에 올라가 있는 '상태'를 모두 선택함.
+  :active   : 사용자가 마우스로 링크를 클릭하고 있는 상태를 모두 선택함.
+  :focus   : 초점이 맞춰진 인풋태그를 모두 선택함.
+
+2. 상태 의사 클래스(UI element states pseudo-classes)
+  :checked   : 체크된 상태의 인풋태그를 모두 선택함.
+  :enabled   : 사용할 수 있는 인풋태그를 모두 선택함.
+  :disabled   : 사용할 수 없는 인풋태그를 모두 선택함.
+
+3. 구조 의사 클래스(structural pseudo-classes)
+
+ 3-1) 자식태그중에 자식태그만 선택하는 유형
+  :first-child   : 모든 자식태그 중에서 첫 번째에 위치하는 자식태그를 모두 선택함.
+  :last-child   : 모든 자식태그 중에서 마지막에 위치하는 자식태그를 모두 선택함.
+  :nth-child   : 모든 자식태그 중에서 앞에서부터 n번째에 위치하는 자식태그를 모두 선택함.
+  :nth-last-child: 모든 자식태그 중에서 뒤에서부터 n번째에 위치하는 자식태그를 모두 선택함.
+  :only-child   : 자식태그를 한개만 가지는 태그를 선택함.
+  
+ 3-2) 자식태그중에 다른 특정태그를 선택하는 유형
+  :first-of-type: 모든 자식태그 중에서 첫 번째로 등장하는 특정태그를 모두 선택함.
+  :last-of-type : 모든 자식태그 중에서 마지막으로 등장하는 특정태그를 모두 선택함
+  :nth-of-type   : 모든 자식태그 중에서 n번째로 등장하는 특정태그를 모두 선택함.
+  :nth-last-of-type : 모든 자식태그 중에서 뒤에서부터 n번째로 등장하는 특정태그를 모두 선택함.
+  :only-of-type : 모든 자식태그 중에서 특정태그 하나만 가지는 자식태그를 선택함.
+  
+ 3-3) 그 외의 유형
+  :empty      : 아무런 자식태그도 가지지 않는 태그를 모두 선택함.
+  :root         : 해당 스타일시트를 적용하는 문서파일의 root태그를 선택함.
+  
+4. 기타 의사 클래스
+  :not(sel)      : 모든 선택자(sel)와 함께 사용할 수 있으며, 해당 선택자를 반대(자바의 !개념)로 적용함.
+  :lang(언어)      : 특정 요소를 언어 설정에 따라 다르게 표현할 때에 사용함.
+  
+  ※중요사항 : 요소=태그
+ -->
+ 
+<style>
+
+   /*바디태그 전체(레이아웃) 디폴트 지정*/
+   body{
+      margin:0px;
+   }
+   body, ul, li {
+      margin:0px;            /*마진 없음*/
+      padding:0px;         /*패딩 없음*/
+      list-style-type:none;   /*리스트 앞에 공백*/
+   }
+   
+   /*탑 태그 부분*/
+   #top{                  /*id값으로 받아와서 # 붙임*/
+      height:100px;
+      background:#ddd;      /*요즘 홈페이지는 공백부분(화이트) 빼고 그레이계열 색상 많이 씀*/
+   }
+   #top>div{
+      float:left;            /*탑의 자식 div는 앞으로 전부 좌측 정렬*/
+   }
+   #top>div:first-child{
+      width:70%;
+   }
+   #top>div:last-child{
+      width:30%;
+      text-align:right;
+   }
+   
+   /*헤더 태그 부분*/
+   #header{
+      height:100px;
+      background:lightblue;
+   }
+   #header>div{
+      height:100px;
+      background:olive;
+      width:1200px;
+      margin:0 auto;
+   }
+   /*메인컨텐츠 태그 부분*/
+   #mainContent{
+      width:1200px;
+      margin:0 auto;
+      background:#ddd;
+      overflow:auto;
+   }
+   #mainContent>div{
+      float:left;
+   }
+   #mainContent>div:first-child{
+      width:200px;
+   }
+   #mainContent>div:last-child{
+      width:100px;
+   }
+   #mainContent>div>img {
+      width:100%;
+      height:100%;
+      text-align:center;
+   }
+   
+   /*풋태그*/
+   #bottom{
+      height:50px;
+      text-align:center;
+      background:#666;
+      color:#fff;
+   }
+</style>
+</head>
+<body>
+   <div id="top">
+      <div style="background:yellow">메뉴1</div>
+      <div style="background:pink">로그인 회원가입 고객센터</div>
+   </div>
+   <div id="header">
+      <div>헤더</div>
+   </div>
+   <div id=mainContent>
+      <div>메인컨텐츠
+         <ul>
+            <li>자주하는 질문</li>
+            <li>Q&A</li>
+            <li>회원가입</li>
+            <li>커뮤니티</li>
+         </ul>
+      </div>
+      <div>
+         <img src="../img/samdasu.jpg">
+         <img src="../img/samdasu.jpg">
+         <img src="../img/samdasu.jpg">
+         <img src="../img/samdasu.jpg">
+      </div>
+   </div>
+   <div id="bottom">
+      회사소개?
+   </div>
+</body>
+</html>

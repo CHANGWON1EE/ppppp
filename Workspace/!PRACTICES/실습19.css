@@ -1,0 +1,44 @@
+body {
+    /* background: url(/css/img/2.jpg) no-repeat center/100vw 100vh; */
+    /* background: url(/css/img/2.jpg) 0/100vw(cover) 100vh no-repeat; */
+    background: url(/css/img/2.jpg) 0/cover no-repeat;
+    text-align: center;
+    line-height: 100vh;
+    font-size: 0.8em;
+    margin: 0;
+}
+
+/* body 에 적용한 background-image 의 opacity 는 적용 불가함에 주의 */
+
+/* < background-size - cover >
+
+    - 이미지를 컨테이너에 가득 채우되 컨터이너 크기 변화에 따른 수평과 수직에
+      대한 이미지 늘림과 줄임으로 인한 이미지 원본 왜곡 현상을 최소화함으로써
+      좀 더 자연스로운 배경 표현 가능.
+      단, 컨터이너를 확장하는 경우 이미지에 대한 늘림 대신 확대가 적용됨으로써
+      수평과 수직에 대한 이미지 잘림 현상 발생.
+*/
+
+/* p 태그 내에는 다른 블럭 요소가 포함되지 못함에 주의 */
+
+p {
+    display: inline-block;
+    background: url(/css/img/1.jpg) no-repeat center/300px 300px;
+    /* background: url(/css/img/1.jpg) 0/300px 300px no-repeat; */
+    width: 300px;
+    height: 300px;
+    line-height: normal;
+    white-space: pre-line;
+    overflow: auto;
+    color: darkgreen;
+    vertical-align: middle;
+    opacity: .8;
+}
+
+span {
+    font-size: 1.5em;
+    color: blueviolet;
+    font-weight: bold;
+    /* font: bold 1.5em normal blueviolet; */
+}
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/*
+	
+	목차
+	
+	할일 순서대로 시작한다.
+	
+	할일 순서 1 : 먼저 바디단을 설정해준다
+	할일 순서 2 : 다음으로 헤드단을 설정해준다
+	
+	=====
+	
+	알고가야할것
+	
+	margin : div의 사방전체부분
+	margin-top : div의 위쪽부분 
+	margin-right : div의 오른쪽부분
+	margin-bottom : div의 아래쪽부분
+	margin-left : div의 왼쪽부분
+	
+	padding : div 사방전체부분
+	padding-top : div의 위쪽부분 
+	padding-right : div의 오른쪽부분
+	padding-bottom : div의 아래쪽부분
+	padding-left : div의 왼쪽부분
+	
+	*/
+	
+	/*헤드단 시작 - 할일 순서 2 : 다음으로 헤드단을 설정해준다 */
+	
+	img{
+		width: 300px;
+		margin: 50px;
+	}
+	
+	#jemok1{ /* 제목1 : h1태그 id 선택자로 불러오기 */
+		background-color: lightblue;
+		margin: 0px; /*div가 아니라서 h1태그, 즉 텍스트라 전부 묶음*/
+		padding: 20px;
+	}
+	
+	#haeng1{ /* div 1행 추가한거 id 선택자로 불러오기 */
+		background-color: yellow;
+		margin: 20px 15px 10px 5px;
+		padding: 5px 10px 15px 20px;
+		/*
+		12시 방향부터 12, 3, 6, 9시 방향으로 인식된다.
+		물론 일일히 top, right, bottom, left에 콜론(:)을 붙여서 일일히 설정해줘도 된다.
+		*/
+	}
+	
+</style>
+</head>
+<body>
+
+	<!-- 할일 순서 1 : 먼저 바디단을 설정해준다 -->
+	
+	<h1 id="jemok1">마진(margin):객체 바깥쪽 여백</h1>
+	
+	<div id="haeng1">
+		<fieldset> <!-- 1행추가, 필드셋으로 규격범위보이게 설정 -->
+		
+			패딩(padding) : 객체 안쪽 여백<br/>
+			div태그는 margin, padding이 0px
+			
+			<!--
+			
+			필드셋의 선 기준에서 padding값을 빼고 light blue 백그라운드와
+			아래 haeng2의 영역과의 이격거리를 주는것이 margin값이다.
+			
+			margin값을 빼고 필드셋의 선 기준에서 밖으로 삐져나오는 백그라운드 컬러가
+			padding 값이다.
+			
+			-->
+			
+		</fieldset>
+	</div>
+	
+	<div id="haeng2">
+		<fieldset> <!-- 2행추가, 필드셋으로 규격범위보이게 설정 -->
+		
+			패딩(padding) : 객체 안쪽 여백
+			
+		</fieldset>
+	</div>
+	<img src="../img/1.jpg" align="right"> 뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기
+	<!-- 이미지태그 : 이미지지정 및 오른쪽정렬 -->
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>입력 텍스트1:
+        <input type="text">
+    </div>
+    <!-- 텍스트 박스 크기 -->
+    <div>입력 텍스트2:
+        <input type="text" size="3">
+    </div>
+
+    <!-- 최소 5글자 이상 -->
+    <div>입력 텍스트3:
+        <input type="text" minlength="5">
+    </div>
+
+    <!-- 최대 5글자 / 즉시 확인 가능 -->
+    <div>입력 텍스트4:
+        <input type="text" maxlength="5">
+    </div>
+
+    <!-- 기존 텍스트에 추가되는 형식 -->
+    <div>입력 텍스트5:
+        <input type="text" value="텍스트를 입력하세요^^ 저는 자동으로 지워지지 않아요~" size="50">
+    </div>
+
+    <!-- 기존에 위치하던 텍스트는 사라지고 새로운 텍스트가 추가되는 형식 -->
+    <div>입력 텍스트6:
+        <input type="text" placeholder="텍스트를 입력하세요^^ 저는 자동으로 지워지지 않아요~" size="50">
+    </div>
+
+    <!-- 읽기 전용(수정 불가) / readonly="readonly" -->
+    <div>입력 텍스트7:
+        <input type="text" value="읽기 전용 텍스트입니다~" readonly size="50">
+    </div>
+
+    <div>배달 시 요청사항:
+        <input type="text" placeholder="배달 시 요청사항을 입력하세요." size="30">
+    </div>
+    <hr>
+
+    <div>
+        <label for="named">성명: </label>
+        <input type="text" id="named">
+    </div>
+
+    <div>
+        <label for="replyTo">연락처: </label>
+        <input type="text" id="replyTo">
+    </div>
+
+    <div>
+        <input type="text">
+    </div>
+
+
+    <!-- label 안에 label 올 수 없음 -->
+    <div>
+        <label>직업: 
+            <input type="text">
+        </label>
+    </div>
+    <hr>
+
+    <!-- action=전송할 위치
+    name=식별할 수 있도록 기재 / 서버에서만 인식하는 고유 식별자
+    -->
+
+    <form action="server.html" name="studentInfo">
+        <div>
+            <label for="named1">이름: </label>
+            <input type="text" id="named1" name="named1" minlength="3" maxlength="5">
+        </div>
+
+        <div>
+            <label for="stNum">학번: </label>
+            <input type="text" id="stNum" name="stNum" placeholder="2자리만 입력 가능" minlength="2" maxlength="2">
+        </div>
+    </form>
+    <hr>
+    
+    <!-- method 생략 시 dafalut는 get 방식
+         - get 방식=검색할 때 주로 쓰임 개방된 상태
+         - post 방식=암호화
+         - id는 고유한 속성을 페이지당 무조건 한개
+         - class는 여러 속성 가능
+    -->
+    <form action="server.html" name="studentInfo" method="get">
+        <div>
+            <label for="named2">이름: </label>
+            <input type="text" id="named2" name="named2" minlength="3" maxlength="5">
+        </div>
+
+        <div>
+            <label for="stNum1">학번: </label>
+            <input type="text" id="stNum1" name="stNum1" placeholder="2자리만 입력 가능" minlength="2" maxlength="2" required>
+        </div>
+
+        <input type="submit" name="transBtn" value="전송">
+    </form>
+    <hr>
+
+    <!-- novalidate: 속성 지정을 통한 form 그룹 차원에서의 유효성 검사 해제 -->
+    <form action="server.html" name="studentInfo" method="get" novalidate>
+        <div>
+            <label for="named3">이름: </label>
+            <input type="text" id="named3" name="named3" minlength="3" maxlength="5" required>
+        </div>
+
+        <div>
+            <label for="stNum2">학번: </label>
+            <input type="text" id="stNum2" name="stNum2" placeholder="2자리만 입력 가능" minlength="2" maxlength="2" required>
+        </div>
+
+        <input type="submit" name="transBtn" value="전송">
+    </form>
+    <hr>
+
+    <form action="server.html" name="studentInfo" method="post">
+        <div>
+            <label for="named4">이름: </label>
+            <input type="text" id="named4" name="named4" minlength="3" maxlength="5" required>
+        </div>
+
+        <div>
+            <label for="stNum3">학번: </label>
+            <input type="text" id="stNum3" name="stNum3" placeholder="2자리만 입력 가능" minlength="2" maxlength="2" required>
+        </div>
+
+        <input type="submit" name="transBtn" value="전송">
+        <input type="image" class="" src="" alt="전송 버튼">
+    </form>
+    <hr>
+
+
+    
+</body>
+</html>

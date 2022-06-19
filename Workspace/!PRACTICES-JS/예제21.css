@@ -1,0 +1,45 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.main_container {
+    box-sizing: border-box;
+    width: 500px;
+    height: 540px;
+}
+
+img {
+    box-sizing: border-box;
+    width: 500px;
+    height: 500px;
+}
+
+.nation_container {
+    display: flex;
+    justify-content: center;
+}
+
+.nationBox {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    
+    text-align: center;
+    line-height: 30px;
+    color: yellow;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: darkgray;
+    opacity: .5;
+}
+
+.nation1 {
+    opacity: 1;
+}

@@ -1,0 +1,24 @@
+table {
+    border-collapse: collapse;
+}
+
+figcaption {
+    color: blue;
+}
+
+th, td {
+    box-sizing: border-box;
+    border: 2px solid;
+    width: 100px;
+    height: 30px;
+}
+
+th {
+    background-color: greenyellow;
+}
+
+td {
+    background-color: lightpink;   
+    text-align: right;
+    padding-right: 20px;
+}

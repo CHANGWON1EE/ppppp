@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 선택자</title>
+    <!-- [] id 속성을 가진 요소 -->
+    <style>
+        [id] {
+            background-color: bisque;
+        }
+
+        input[id] {
+            font-weight: bold;
+        }
+
+        [id="lg"] {
+            list-style: square;
+        }
+
+        [target="self"] {
+            text-decoration: none;
+        }
+
+        ol [href] {
+            font-size: 25px;
+        }
+
+        [href][target] {
+            font-style: italic;
+        }
+
+        [class^="font"] {
+            color: green;
+        }
+        /* ^: -로 시작하는거 */
+        
+        [class$="Size"] {
+            color: red;
+        }
+        /* $: -로 끝나는거  */
+
+        [href*="co."] {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>속성 선택자</h1>    
+    <hr>
+    
+    <!-- ul>(li[id]>a[target])*3
+    <ul>
+        <li id=""><a href="" target=""></a></li>
+        <li id=""><a href="" target=""></a></li>
+        <li id=""><a href="" target=""></a></li>
+    </ul> -->
+    <ul>
+        <li id="naver"><a href="http://www.naver.com">네이버</a></li>
+        <li id="daum"><a href="http://www.daum.net" target="_self">다음</a></li>
+        <li id="google"><a href="http://www.google.com" target="_blank">구글</a></li>
+    </ul>
+    <hr>
+
+    <ol>
+        <li id="samsung"><a href="https://www.samsung.com">삼성</a></li>
+        <li id="lg"><a href="https://www.lge.co.kr">LG</a></li>
+        <li id="kt"><a href="https://www.kt.com">KT</a></li>
+        <li>현대</li>
+        <li>한화</li>
+    </ol>
+    <hr>
+
+    <form action="#">
+        <div>
+            <label for="name" class="fontStyle color">이름</label>
+            <input type="text" id="name" placeholder="이름을 입력하세요">
+        </div>
+
+        <div>
+            <label class="color fontSize">주소
+                <input type="text" placeholder="주소를 입력하세요">
+            </label>
+        </div>
+
+        <button>전송</button>
+    </form>
+</body>
+
+</html>

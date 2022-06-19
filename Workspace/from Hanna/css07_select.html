@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<!--
+
+	html속성
+	1. oncontextmenu : 마우스 오른쪽 키 사용 제어
+	2. onselect      : 선택 제어
+	3. ondragstart   : 드래그 시작 제어
+	4. ondragend     : 드래그 완료 제어
+
+	return false는 어떠한 이벤트 작용에 대한 결과값이 false가 되었다는 뜻이다.
+	
+	프로그래밍에서 false란?
+	ㄴ실패, 거짓, 불가능, 비작동, 비구동, 아닐 비(非) 등을 뜻한다. 
+ -->
+
+<html oncontextmenu="return false"
+      onselect="return false"
+      ondragstart="return false"
+      ondragend="return false">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+/*
+	구조선택자 (structural selector)
+	
+	first-child      : 모든 자식중에서 첫번째 자식을 모두 선택함.
+	last-child       : 모든 자식중에서 마지막 자식을 모두 선택함.
+	nth-child	     : 모든 자식중에서 앞에서부터 n번째 자식을 모두 선택함.
+	nth-last-child   : 모든 자식중에서 뒤에서부터 n번째 자식을 모두 선택함.
+	first-of-type    : 모든 자식중에서 첫번째로 등장하는 특정 요소를 모두 선택함.
+	last-of-type     : 모든 자식중에서 마지막으로 등장하는 특정 요소를 모두 선택함.
+	nth-of-type      : 모든 자식중에서 n번째로 등장하는 자식을 모두 선택함.
+	nth-last-of-type : 모든 자식중에서 뒤에서부터 n번째로 등장하는 특정 요소를 모두 선택함.
+	only-child	     : 자식을 하나만 가지는, 태그의 자식을 모두 선택함.
+	only-of-type     : 요소들 중 자식만을 가지는 태그의 자식을 모두 선택함.
+	empty	         : 아무런 자식(child) 요소도 가지지 않는 태그를 모두 선택함.
+	root             : 문서의 root 요소를 선택함.
+	not              : 모든 선택자와 함께 사용할 수 있으며, 해당 선택자를 반대로 적용함.
+
+	=====
+	
+	그림자 만들기
+	
+	box-shadow: 오른쪽 아래쪽 투명 색상
+	box-shadow: 0px 0px 0px red;
+	
+	text-shadow: 오른쪽 아래쪽 투명 색상
+	text-shadow: 0px 0px 0px red;
+	
+	=====
+	
+	텍스트 스타일
+	::first-letter   : 문단의 첫번째 문자에 스타일 적용
+	::first-line     : 문단의 첫번째 줄에 스타일 적용(첫번째 줄 : 줄넘어감 기준)
+	
+*/
+
+	/* list1 태그 시작 */
+	#list1>li:nth-child(3n){ /* 리스트1>리스트 태그의 3의배수번째 자식 태그를 선택 */
+		/* 여기서는 '리스트1-3'을 뜻함 */
+		background: pink;
+	}
+	
+	#list1>li:first-child{ /* 리스트1>리스트 태그의 첫번째 자식태그를 선택 */
+		/* 여기서는 '리스트1-1'을 뜻함 */
+		background: orange;
+	}
+	
+	#list1>li:last-child{/* 리스트1>리스트 태그의 마지막 자식태그를 선택 */
+		/* 여기서는 '리스트1-4'을 뜻함 */
+		color: red;
+		font-size: 1.2em;
+	}
+	
+	#list1>li{
+		box-shadow: 10px 5px 5px yellow;
+	}
+	
+	#list1>li{
+		text-shadow: -10px -5px 5px green;
+	}
+	/* list1 태그 끝 */
+	/* list2 태그 시작 */
+	#list2>li:nth-of-type(2n){ /* 리스트2>리스트 태그의 2의배수번째 자식 태그를 선택 */
+		/* 여기서는 '리스트2-2','리스트2-4'을 뜻함 */
+		background: yellow;
+	}
+	
+	#list2>li:nth-of-type(2n+1){ /* 리스트2>리스트 태그의 홀수번째 자식 태그를 선택 */
+		/* 여기서는 '리스트2-3'을 뜻함 */
+		background: orange;
+	}
+	
+	#list2>li:first-of-type{ /* 리스트2>리스트 태그의 첫번째로 나오는 자식 태그를 모두 선택 */
+		/* 여기서는 '리스트2-1'을 뜻함 */
+		font-size: 2em;
+	}
+	
+	#list2>li:last-of-type{ /* 리스트2>리스트 태그의 마지막으로 나오는 자식 태그를 모두 선택 */
+		/* 여기서는 '리스트2-4'을 뜻함 */
+		color: green;
+		/* '리스트2-4'는 background도 yellow로 잡혀있음 */
+	}
+	
+	/* list2 태그 끝 */
+	/* txt1 태그 시작 */
+	
+	#txt1 {
+	
+		/*txt1 선택자의 괄호 안의 내용은 구현되는 브라우저 종류를 쓴것임*/
+		
+		background: #bfd255;
+		/* Old browsers */
+		
+		background: -moz-linear-gradient(top,  #bfd255 0%, #35208e 1%, #34e5df 100%, #8eb92a 100%, #8eb92a 100%, #8eb92a 100%, #72aa00 100%, #9ecb2d 100%);
+		/* FF3.6-15 */
+		
+		background: -webkit-linear-gradient(top,  #bfd255 0%,#35208e 1%,#34e5df 100%,#8eb92a 100%,#8eb92a 100%,#8eb92a 100%,#72aa00 100%,#9ecb2d 100%);
+		/* Chrome10-25,Safari5.1-6 */
+		
+		background: linear-gradient(to bottom,  #bfd255 0%,#35208e 1%,#34e5df 100%,#8eb92a 100%,#8eb92a 100%,#8eb92a 100%,#72aa00 100%,#9ecb2d 100%);
+		/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd255', endColorstr='#9ecb2d',GradientType=0 );
+		/* IE6-9 */	
+	}
+	
+	#txt1::first-Letter{ /* txt1 태그에서 문단내의 첫번째 문자에 스타일 적용 */
+		font-size: 2em;
+		background: pink;
+		font-weight: bold;
+		color: red;
+	}
+	
+	#txt1::first-line{ /* txt1 태그에서 문단내의 첫번째 줄에 스타일 적용 */
+		text-decoration:underline;
+	}
+	
+	#txt1::selection{
+		color: red;
+		background: #000;
+	}
+	
+	
+</style>
+</head>
+<body>
+	<ol id="list1" type="I">
+		<li>리스트1-1</li>
+		<li>리스트1-2</li>
+		<li>리스트1-3</li>
+		<li>리스트1-4</li>
+	</ol>
+	<ol id="list2" type="I">
+		<li>리스트2-1</li>
+		<li>리스트2-2</li>
+		<li>리스트2-3</li>
+		<li>리스트2-4</li>
+	</ol>
+	<div id="txt1">
+		뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기뭐시기
+	</div>
+</body>
+</html>

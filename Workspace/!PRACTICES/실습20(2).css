@@ -1,0 +1,139 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+/* ================================================================================ */
+/* out frame */
+header, main, footer {
+    width: calc(1024px*0.8);
+    margin: 0 auto;
+    text-align: center;
+}
+
+header, footer {
+    height: 20vh;
+}
+
+main {
+    height: 60vh;
+}
+
+footer {
+    background-color: antiquewhite;
+    line-height: calc(100vh * .2);
+}
+
+/* ================================================================================ */
+/* header frame */
+
+h1 {
+    display: inline-block;
+
+    /*
+        a 태그에 수직 정렬을 위한 마진을 적용해도 되지만 바깥쪽
+        요소에 적용하는 것이 좀 더 정밀한 수직 정렬 지정이 가능.
+    */
+    margin: calc((20vh - 150px)/2) 20px;
+}
+
+header h1 a {
+    display: inline-block;
+    
+    /* 너비와 높이를 지정해야만 백그라운드에 대한 영역 지정이 되어 text-inent 속성이 적용됨에 주의. */
+    width: 150px;
+    height: 150px;
+    background: url(../image/starbucks_logo.jpg) no-repeat 0/150px;
+    text-indent: -9999em;
+}
+
+header nav {
+    display: inline-block;
+    margin: calc((20vh - 38px) /2 ) 20px;
+    
+    /*
+        인라인 블럭요소로 지정된 h1 과 ul 요소는 높이를 같게 지정하더라도 기본적인 텍스트에 대한
+        크기가 달라 ul 요소의 vertical-align top 이 h1 요소보다 더 높이가 낮은 지점에서 부터 시작
+        되므로, 이 단차를 맞추기 위해서 ul 태그의 vertical-align 을 h1 요소의 top 으로 맞추어야만
+        동일한 수직 높이를 유지.
+    */
+    vertical-align: top;
+}
+
+header ul li {
+    display: inline-block;
+    margin-left: 23px;
+}
+
+header ul li a {
+    display: inline-block;
+    width: 108px;
+    height: 38px;
+    background: url(/image/hp_menu.jpg) -3px -3px;
+    text-indent: -9999em;
+}
+
+header ul li:nth-child(2) a {
+    background:url(/image/hp_menu.jpg) calc(-3px + -109px) -3px;
+}
+
+header ul li:nth-child(3) a {
+    background:url(/image/hp_menu.jpg) calc(-4px + -109px * 2) -3px;
+}
+
+header ul li:nth-child(4) a {
+    background:url(/image/hp_menu.jpg) calc(-5px + -109px * 3) -3px;
+}
+
+header ul li a:hover {
+    background:url(/image/hp_menu.jpg) -3px -42px;
+}
+
+header ul li:nth-child(2) a:hover {
+    background:url(/image/hp_menu.jpg) calc(-3px + -109px) -42px;
+}
+
+header ul li:nth-child(3) a:hover {
+    background:url(/image/hp_menu.jpg) calc(-4px + -109px * 2) -42px;
+}
+
+header ul li:nth-child(4) a:hover {
+    background:url(/image/hp_menu.jpg) calc(-5px + -109px * 3) -42px;
+}
+
+/* ================================================================================ */
+/* main frame */
+
+#section_article {
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+}
+
+section {
+    height: 60%;
+    background-color: darkgrey;
+    line-height: calc(100vh*0.6*0.6);
+}
+
+article {
+    height: 40%;
+    background-color: cadetblue;
+    line-height: calc(100vh*0.6*0.4);
+}
+
+aside {
+    display: inline-block;
+    width: 30%;
+    height: 100%;
+    background-color: burlywood;
+    margin-left: -6px;
+    line-height: calc(100vh*0.6);
+
+    /* 
+        인라인 블럭인 section_article 을 하나의 텍스트라 가정했을 때, aside 가
+        section_article 의 baseline 을 기준으로 수직 위치가 결정되므로 aside 의
+        vertical-align 을 top 이나 bottom 으로 조정하여 수직 위치를 정렬.
+    */
+   vertical-align: top;
+}

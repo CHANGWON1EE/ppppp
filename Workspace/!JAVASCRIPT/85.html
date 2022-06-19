@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수선언과 요소선택</title>
+
+    <!-- 
+    < JQuery 실행을 위한 준비 >
+
+  - https://jquery.com 에서 파일 다운로드하여 상대경로 설정 또는
+    jquery CDN(Content Delivery Network) 링크 경로 임포트.
+    script 태그로 jquery 경로 지정 시 반드시 js 파일 위에서 임포트
+    되어야 js 파일에서 jquery 문법과 라이브러리를 사용 가능함에 주의.
+
+  ==============================================================================================
+
+    < CDN(Content Delivery Network) >
+  
+  - https://code.jquery.com/
+  
+    버전 선택후 minified 로 링크 복사하여 아래와 같이 설정.
+  -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!-- jquery는 js 파일보다 항상 위에 위치해야함 -->
+    <script defer src="85.js"></script>
+</head>
+
+<body>
+    <h1>변수선언과 요소선택</h1>
+    <hr>
+
+    <ul id="nav">
+        <li>
+            <h3><a href="#" class="menu mail">메일</a></h3>
+        </li>
+        <li>
+            <h3><a href="#" class="menu cafe">카페</a></h3>
+        </li>
+        <li>
+            <h3><a href="#" class="menu blog">블로그</a></h3>
+        </li>
+        <li>
+            <h3><a href="#" class="menu knowledge">지식in</a></h3>
+        </li>
+    </ul>
+    <hr>
+    <input type="button" value="다음">
+
+    <div>
+        <p>
+            First ipsum dolor sit amet consectetur adipisicing elit. Esse nisi facere excepturi. Officiis soluta,
+            assumenda
+            aliquam dicta ipsum culpa dolorem quae porro. Odit, temporibus? Pariatur voluptatibus est maiores aspernatur
+            rem?
+        </p>
+        <p>
+            Second ipsum dolor sit amet consectetur adipisicing elit. Esse nisi facere excepturi. Officiis soluta,
+            assumenda
+            aliquam dicta ipsum culpa dolorem quae porro. Odit, temporibus? Pariatur voluptatibus est maiores aspernatur
+            rem?
+        </p>
+        <p>
+            Third ipsum dolor sit amet consectetur adipisicing elit. Esse nisi facere excepturi. Officiis soluta,
+            assumenda
+            aliquam dicta ipsum culpa dolorem quae porro. Odit, temporibus? Pariatur voluptatibus est maiores aspernatur
+            rem?
+        </p>
+        <p>
+            Fourth ipsum dolor sit amet consectetur adipisicing elit. Esse nisi facere excepturi. Officiis soluta,
+            assumenda
+            aliquam dicta ipsum culpa dolorem quae porro. Odit, temporibus? Pariatur voluptatibus est maiores aspernatur
+            rem?
+        </p>
+        <p>
+            Fifth ipsum dolor sit amet consectetur adipisicing elit. Esse nisi facere excepturi. Officiis soluta,
+            assumenda
+            aliquam dicta ipsum culpa dolorem quae porro. Odit, temporibus? Pariatur voluptatibus est maiores aspernatur
+            rem?
+        </p>
+    </div>
+</body>
+
+</html>

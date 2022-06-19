@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-top: 30px;
+    
+}
+
+.main_container {
+    position: relative;   
+    margin-bottom: 30px;
+}
+
+/* ==================================================================================================== */
+/* < 슬라이드 이미지 > */
+
+.slide_list {
+    position: relative;   
+    overflow: hidden;
+    width: 400px;
+    height: 500px;
+    list-style: none;
+    border-radius: 50px;
+}
+
+.slide_list li {
+    position: absolute;
+    left: 100%;
+    transition: all .5s .2s;
+    /* opacity: 1; */
+}
+
+.slide_list li:first-of-type {
+    left: 0;
+    opacity: 1;
+}
+
+/* .slide_list li:not(:first-of-type) {
+    opacity: 0;
+} */
+
+.slide_list li img{
+    width: 400px;
+    height: 500px;
+}
+
+/* ==================================================================================================== */
+/* < 왼쪽 버튼 > */
+
+.main_container a {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform:translateY(-50%);
+    transition: opacity .3s ease-in-out;
+}
+
+.main_container a:hover {
+    opacity: 1;
+}
+
+.btn_back {
+    opacity: 0.2;
+    right: 100%;
+    /* top: 50%;
+    transform:translateY(-50%); */
+}
+
+.nonVisible {
+    display: none;
+}
+
+/* ==================================================================================================== */
+/* < 오른쪽 버튼 > */
+
+.btn_forward {
+    opacity: 0.2;
+    left: 100%;
+    /* bottom: 50%;
+    transform:translateY(-50%); */
+}
+
+/* ==================================================================================================== */
+/* < 단추 버튼 > */
+
+.pager {
+    display: flex;
+}
+
+.dot {
+    height: 30px;
+    width: 30px;
+    margin: 0 10px 20px 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+/* ==================================================================================================== */
+
+p {
+    margin: 0;
+    font-size: 1.5em;
+    text-align: justify;
+    word-break: break-all;
+}

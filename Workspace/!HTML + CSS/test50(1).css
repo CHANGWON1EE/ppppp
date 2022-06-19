@@ -1,0 +1,31 @@
+.fontsize_15 {
+    font-size: 15px;
+}
+
+.fontsize_20 {
+    font-size: 20px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.fontcolor_Yellow {
+    color: rgb(226, 226, 32);
+}
+
+.fontcolor_Blue {
+    color: blue;
+}
+
+.backcolor_Green {
+    background-color: green;
+}
+
+.backcolor_Red {
+    background-color: red;
+}
+
+.backcolor_Yellow {
+    background-color: yellow;
+}

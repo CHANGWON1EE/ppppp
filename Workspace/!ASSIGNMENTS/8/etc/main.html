@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+
+    <link rel="stylesheet" href="../../!fullPage.js-2.9.7/jquery.fullPage.css">
+    <script defer src="../../!fullPage.js-2.9.7/jquery.fullPage.js"></script>
+
+<!-- < portfolio >
+포트폴리오는 서류가방, 자료수집철, 자료 묶음 등을 뜻한다. 자신의 이력이나 경력 또는 실력 등을 알아볼 수 있도록 자신이 과거에 만든 작품이나 관련 내용 등을 모아 놓은 자료철 또는 자료 묶음, 작품집으로, 실기와 관련된 경력증명서이다. 자신의 실력을 남에게 보여주기 위한 자료철이기 때문에 자신의 독창성과 능력을 한눈에 알아볼 수 있도록 간단 명료하게 만드는 것이 좋다. -->
+
+</head>
+
+<body>
+    <div id="fullpage">  <!-- id 값은 반드시 지켜줘야 하는 값(변경불가) -->
+        <div class="section">Section 1</div> <!--  클래스명 section 고정 -->
+        <div class="section">
+            <div class="slide" data-anchor="slide1">Slide 2.1</div> <!-- 가로 슬라이드 클래스명 slide 고정 -->
+            <div class="slide" data-anchor="slide2">Slide 2.2</div>
+        </div>
+        <div class="section">Section 3</div>
+        <div class="section">Section 4</div>
+    </div>
+    
+    <script>
+        // https://github.com/alvarotrigo/fullPage.js/tree/master/lang/korean ▶ 옵션값 참고
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                //options here
+                licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',  // 무료 사용시 해당 라이센스 카피할 것(반드시 있어야함)
+                navigation: true,  //우측페이저유무
+                navigationPosition: 'right', // left,right(default) 페이저 위치
+                autoScrolling:true,
+                scrollHorizontally: true,
+                slidesNavigation: true, // 슬라이드섹션 네비게이션 유무
+                slidesNavPosition: 'bottom', //네비게이션 위치 (top,bottom)
+                navigationTooltips: ['firstSlide', 'secondSlide'], //navigation active시 타이틀 노출여부(hover포함)
+                showActiveTooltip: true,  //네비게이션 hover(default:false)시 툴팁 표기
+                fitToSection: true,
+                fitToSectionDelay: 1000, // 섹션 넘어갈 때 걸리는 딜레이 시간
+                keyboardScrolling: true, // 키보드 방향키로 스크롤 컨트롤 여부
+                animateAnchor: true,
+                sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'] // 섹션별 컬러
+            });
+        });
+        </script>
+    
+    <!-- <div id="myFullpage">
+        <div class="section">Section 1</div>
+          <div class="section">
+              <div class="slide">Slide 2.1</div>
+              <div class="slide">Slide 2.2</div>
+              <div class="slide">Slide 2.3</div>
+          </div>
+          <div class="section">Section 3</div>
+      </div>
+  
+      <script src="main.js"></script> -->
+    <!-- <header>
+
+    </header>
+
+    <main>
+        <div id="cc">
+            <div class="main_container">
+                <div class="container">첫 번째 페이지</div>
+                <div class="container">두 번째 페이지</div>
+                <div class="container">세 번째 페이지</div>
+                <div class="container">네 번째 페이지</div>
+                <div class="container">다섯 번째 페이지</div>
+            </div>
+        </div>
+
+        <ul class="pager">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </main> -->
+</body>
+
+</html>

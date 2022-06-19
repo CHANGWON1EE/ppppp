@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+	/*
+	border-style : 선의 모양
+	(
+	 solid:실선,
+	 dotted:침선,
+	 dashed:줄선,
+	 double:이중선,
+	 none, groove:홈,
+	 inset:볼록
+	 )
+	
+	border-width : 선의 두께 (px)
+	border-color : 선의 색상 (rgb)
+	
+	border-bottom-style:solid; : 보더 아래쪽 스타일 솔리드타입
+	
+	border-top-style, : 보더 위쪽 선 스타일 별개 선택
+	border-right-style, : 보더 오른쪽 선 스타일 별개 선택 
+	border-bottom-style, : 보대 아래쪽 선 스타일 별개 선택
+	border-left-style : 보더 왼쪽 선 스타일 별개 선택
+	
+	border-bottom-width:5px; : 보더 아래쪽 선 굵기 5px
+	border-bottom-color:red : 보더 아래쪽 선 색깔= 빨강색
+	
+	*/
+	img{
+		width:200px;
+		height:300px;
+	}
+	img1{
+		border-style: solid;
+		border-width: 5px;
+		border-color: red;
+	}
+	img2{
+		border-top: 5px blue double;
+	}
+	img3{
+		border:dashed 5px orange;
+	}
+	img4{
+		border: 5px solid
+	}
+</style>
+</head>
+<body>
+	<img src="../img/1.jpg" id="img1">
+	<img src="../img/2.jpg" id="img2">
+	<img src="../img/3.jpg" id="img3">
+	<img src="../img/4.jpg" id="img4">
+</body>
+</html>
